@@ -26,15 +26,12 @@
               <users/>
             </usertab>
           </user>
-          <!--control tabgroup that contains button to manipulate entities: load, list, create-->
           <control>
             <grid>
               <addGrid/>
               <GridList/>
             </grid>
           </control>
-
-          <!--select record for given record type-->
           <Grid>
             <Grid>
               <Name/>
@@ -62,21 +59,6 @@
             <Associated_materials>
               <addAssociated/>
               <AssociatedList/>
-              <!-- <AssociatedMaterial/>
-              <LacustrineMaterial/>
-              <BurntLacustrineMaterial/>
-              <AssociatedTerrestrialBone/>
-              <BurntBone/>
-              <AssociatedEggshell/>
-              <BurntEggshell/>
-              <AssociatedArtefacts/>
-              <CSTypes/>
-              <RUTypes/>
-              <UnmodTypes/>
-              <GroundMaterial/>
-              <GroundMaterialStatus/>
-              <ArtefactRawMaterial/>
-              <OtherWorkedMaterial/> -->
             </Associated_materials>
             <Topography>
               <TopoSetting/>
@@ -90,6 +72,73 @@
               <Delete/>
             </Topography>
           </Hearth>
+          <HearthAssociated>
+            <AssociatedMaterial>
+              <AssociatedMaterial/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </AssociatedMaterial>
+            <Lacustrine>
+              <LacustrineMaterial/>
+              <BurntLacustrineMaterial/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </Lacustrine>
+            <Eggshell>
+              <AssociatedEggshell/>
+              <BurntEggshell/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </Eggshell>
+            <TerrestrialBone>
+              <AssociatedTerrestrialBone/>
+              <BurntBone/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </TerrestrialBone>
+            <OtherWork>
+              <OtherWorkedMaterial/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </OtherWork>
+            <Artefact>
+              <AssociatedArtefacts/>
+              <ArtefactRawMaterial/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </Artefact>
+            <ChippedStone>
+              <CSTypes/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </ChippedStone>
+            <RetouchedStone>
+              <RUTypes/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </RetouchedStone>
+            <GroundMaterial>
+              <GroundMaterial/>
+              <GroundMaterialStatus/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </GroundMaterial>
+            <UnmodifiedStone>
+              <UnmodTypes/>
+              <Update/>
+              <UpdateAndClose/>
+              <Delete/>
+            </UnmodifiedStone>
+          </HearthAssociated>
         </faims>
       </instance>
       <!--list of numeric and blocktext(memo) attributes(fields)-->
@@ -162,7 +211,7 @@
           <label>Save Grid Square</label>
         </trigger>
       </group>
-      <group ref="Features">
+      <group ref="Features" faims_scrollable="false">
         <label>Features</label>
         <select1 appearance="compact" faims_annotation="false" faims_certainty="false" ref="FeatureList">
           <label>List of features</label>
@@ -201,20 +250,6 @@
         </select1>
         <select1 ref="DegreeInSitu" faims_attribute_name="Degree in situ" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Degree_in_situ?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <select1 ref="ModificationOfHeatRetainerHearths" faims_attribute_name="Modification of heat retainer hearths" faims_attribute_type="vocab" faims_read_only="false" type="image">
-          <label>{Modification_of_heat_retainer_hearths?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <select1 ref="ModificationOfNonHeatRetainerHearths" faims_attribute_name="Modification of non heat retainer hearths" faims_attribute_type="vocab" faims_read_only="false" type="image">
-          <label>{Modification_of_non_heat_retainer_hearths?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
@@ -295,17 +330,32 @@
         </trigger>
       </group>
     </group>
-  </h:body>
-</h:html>
 
-<!-- <select1 ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+    <!-- Associated Hearth -->
+    <group ref="HearthAssociated" faims_rel_type="HearthAssociated">
+      <label>Associated Materials</label>
+      <group ref="AssociatedMaterial">
+        <label>Associated Material</label>
+        <select1 ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Associated_material?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="Lacustrine" faims_hidden="true">
+        <label>Lacustrine</label>
+        <select1 ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Lacustrine_Material}</label>
           <item>
             <label>placeholder</label>
@@ -319,21 +369,19 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="AssociatedTerrestrialBone" faims_attribute_name="Associated terrestrial bone" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Associated_terrestrial_bone}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <select1 ref="BurntBone" faims_attribute_name="Burnt bone" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Burnt_bone}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <select1 ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="Eggshell" faims_hidden="true">
+        <label>Eggshell</label>
+        <select1 ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Associated_eggshell?}</label>
           <item>
             <label>placeholder</label>
@@ -347,13 +395,89 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Associated_artefacts}</label>
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="TerrestrialBone" faims_hidden="true">
+        <label>Terrestrial Bone</label>
+        <select1 ref="AssociatedTerrestrialBone" faims_attribute_name="Associated terrestrial bone" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+          <label>{Associated_terrestrial_bone}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
+        <select1 ref="BurntBone" faims_attribute_name="Burnt bone" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false" faims_hidden="true">
+          <label>{Burnt_bone}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="OtherWork" faims_hidden="true">
+        <label>Other Work</label>
+        <select1 ref="OtherWorkedMaterial" faims_attribute_name="Other worked material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+          <label>{Other_worked_material?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="Artefact" faims_hidden="true">
+        <label>Artefact</label>
+        <select1 ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+          <label>Stone Artefact</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+          <label>{Artefact_raw_material?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="ChippedStone" faims_hidden="true">
+        <label>Chipped Stone</label>
         <select1 ref="CSTypes" faims_attribute_name="CS types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
           <label>{CS_types?}</label>
           <item>
@@ -361,21 +485,38 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="RUTypes" faims_attribute_name="RU types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="RetouchedStone" faims_hidden="true">
+        <label>Retouched Stone</label>
+        <select1 ref="RUTypes" faims_attribute_name="RU types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{RU_types?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Unmod_types?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <select1 ref="GroundMaterial" faims_attribute_name="Ground material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="GroundMaterial" faims_hidden="true">
+        <label>Ground Material</label>
+        <select1 ref="GroundMaterial" faims_attribute_name="Ground material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Ground_material?}</label>
           <item>
             <label>placeholder</label>
@@ -389,17 +530,35 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Artefact_raw_material?}</label>
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+      <group ref="UnmodifiedStone" faims_hidden="true">
+        <label>Unmodified Stone</label>
+        <select1 ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+          <label>{Unmod_types?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="OtherWorkedMaterial" faims_attribute_name="Other worked material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Other_worked_material?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1> -->
+        <trigger ref="Update">
+          <label>{Save_Record}</label>
+        </trigger>
+        <trigger ref="UpdateAndClose">
+          <label>Save and Close</label>
+        </trigger>
+        <trigger ref="Delete">
+          <label>{Delete_Record}</label>
+        </trigger>
+      </group>
+    </group>
+  </h:body>
+</h:html>

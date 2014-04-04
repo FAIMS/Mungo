@@ -13,9 +13,7 @@
 
   <RelationshipElement name="HearthAssociated">
     <description>Materials associated to a hearth</description>
-    <property name="ID" type="text" isIdentifier="true"><description/>
-    </property>
-    <property name="Associated material" type="enum">
+    <property name="Associated material" type="enum" isIdentifier="true">
       <description>Please describe associated material within the area of the hearth material</description>
       <lookup>
         <term HeuristID="0-5166" StandardCode="">{all_}<description/></term>
@@ -33,7 +31,7 @@
         <term HeuristID="0-5162" StandardCode="">{lacbonegg_}<description/></term>
         <term HeuristID="0-5164" StandardCode="">{laceggart_}<description/></term>
         <term HeuristID="0-5151" StandardCode="">{lacust_}<description/></term>
-        <term HeuristID="0-5150" StandardCode="">{none_}<description/></term>
+        <term HeuristID="0-5150" StandardCode="">None<description/></term>
         <term HeuristID="0-5167" StandardCode="">{otherwork}<description/></term>
         <term HeuristID="0-5152" StandardCode="">{terrbone_}<description/></term>
       </lookup>
@@ -41,32 +39,33 @@
     <property name="Lacustrine Material" type="enum">
       <description>Associated lacustrine material</description>
       <lookup>
-        <term HeuristID="0-5175" StandardCode="">{boneandotol_}<description/></term>
-        <term HeuristID="0-5173" StandardCode="">{exoskel_}<description/></term>
-        <term HeuristID="0-5170" StandardCode="">{fishbone_}<description/></term>
-        <term HeuristID="0-5172" StandardCode="">{gastrolith_}<description/></term>
-        <term HeuristID="0-5174" StandardCode="">{mussbone_}<description/></term>
-        <term HeuristID="0-5176" StandardCode="">{mussboneot_}<description/></term>
-        <term HeuristID="0-5169" StandardCode="">{mussel_}<description/></term>
-        <term HeuristID="0-5177" StandardCode="">{mussotol_}<description/></term>
-        <term HeuristID="0-5171" StandardCode="">{otoliths_}<description/></term>
+        <term pictureURL="" HeuristID="0-5175" StandardCode="">{boneandotol_}<description/></term>
+        <term pictureURL="" HeuristID="0-5173" StandardCode="">{exoskel_}<description/></term>
+        <term pictureURL="" HeuristID="0-5170" StandardCode="">{fishbone_}<description/></term>
+        <term pictureURL="" HeuristID="0-5172" StandardCode="">{gastrolith_}<description/></term>
+        <term pictureURL="" HeuristID="0-5174" StandardCode="">{mussbone_}<description/></term>
+        <term pictureURL="" HeuristID="0-5176" StandardCode="">{mussboneot_}<description/></term>
+        <term pictureURL="" HeuristID="0-5169" StandardCode="">{mussel_}<description/></term>
+        <term pictureURL="" HeuristID="0-5177" StandardCode="">{mussotol_}<description/></term>
+        <term pictureURL="" HeuristID="0-5171" StandardCode="">{otoliths_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt lacustrine material" type="enum">
       <description>Burnt lacustrine material?</description>
       <lookup>
         <term HeuristID="0-5182" StandardCode="">{no}<description/></term>
+        <term HeuristID="0-5182" StandardCode="">{yes}<description/></term>
       </lookup>
     </property>
     <property name="Associated terrestrial bone" type="enum">
       <description>Is there associated terrestrial bone?</description>
       <lookup>
-        <term HeuristID="0-5185" StandardCode="">{birdbone_}<description/></term>
-        <term HeuristID="0-5184" StandardCode="">{mammal_}<description/></term>
-        <term HeuristID="0-5187" StandardCode="">{other_}<description/></term>
-        <term HeuristID="0-5186" StandardCode="">{reptile_}<description/></term>
-        <term HeuristID="0-5189" StandardCode="">{undiag}<description/></term>
-        <term HeuristID="0-5188" StandardCode="">{unident_}<description/></term>
+        <term pictureURL="" HeuristID="0-5185" StandardCode="">{birdbone_}<description/></term>
+        <term pictureURL="" HeuristID="0-5184" StandardCode="">{mammal_}<description/></term>
+        <term pictureURL="" HeuristID="0-5187" StandardCode="">{other_}<description/></term>
+        <term pictureURL="" HeuristID="0-5186" StandardCode="">{reptile_}<description/></term>
+        <term pictureURL="" HeuristID="0-5189" StandardCode="">{undiag}<description/></term>
+        <term pictureURL="" HeuristID="0-5188" StandardCode="">{unident_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt bone" type="enum">
@@ -79,13 +78,13 @@
     <property name="Associated eggshell" type="enum">
       <description>Is there an associated eggshell</description>
       <lookup>
-        <term HeuristID="0-5191" StandardCode="">{emu_}<description/></term>
-        <term HeuristID="0-5194" StandardCode="">{emugenyo_}<description/></term>
-        <term HeuristID="0-5195" StandardCode="">{emuoth_}<description/></term>
-        <term HeuristID="0-5192" StandardCode="">{genyo_}<description/></term>
-        <term HeuristID="0-5196" StandardCode="">{genyooth_}<description/></term>
-        <term HeuristID="0-5197" StandardCode="">{indet}<description/></term>
-        <term HeuristID="0-5193" StandardCode="">{other_}<description/></term>
+        <term pictureURL="" HeuristID="0-5191" StandardCode="">{emu_}<description/></term>
+        <term pictureURL="" HeuristID="0-5194" StandardCode="">{emugenyo_}<description/></term>
+        <term pictureURL="" HeuristID="0-5195" StandardCode="">{emuoth_}<description/></term>
+        <term pictureURL="" HeuristID="0-5192" StandardCode="">{genyo_}<description/></term>
+        <term pictureURL="" HeuristID="0-5196" StandardCode="">{genyooth_}<description/></term>
+        <term pictureURL="" HeuristID="0-5197" StandardCode="">{indet}<description/></term>
+        <term pictureURL="" HeuristID="0-5193" StandardCode="">{other_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt eggshell" type="enum">
@@ -98,6 +97,7 @@
     <property name="Associated artefacts" type="enum">
       <description>Associated artefacts</description>
       <lookup>
+        <term>None<description/></term>
         <term HeuristID="0-5199" StandardCode="">{cs_}<description/></term>
         <term HeuristID="0-5203" StandardCode="">{csgs_}<description/></term>
         <term HeuristID="0-5202" StandardCode="">{csum_}<description/></term>
@@ -133,42 +133,42 @@
     <property name="RU types" type="enum">
       <description>RU types?</description>
       <lookup>
-        <term HeuristID="0-5228" StandardCode="">{backed_}<description/></term>
-        <term HeuristID="0-5230" StandardCode="">{bifac_}<description/></term>
-        <term HeuristID="0-5226" StandardCode="">{notch_}<description/></term>
-        <term HeuristID="0-5233" StandardCode="">{notchback_}<description/></term>
-        <term HeuristID="0-5234" StandardCode="">{notchother_}<description/></term>
-        <term HeuristID="0-5232" StandardCode="">{notchscrap_}<description/></term>
-        <term HeuristID="0-5231" StandardCode="">{otherru_}<description/></term>
-        <term HeuristID="0-5235" StandardCode="">{scrapback_}<description/></term>
-        <term HeuristID="0-5227" StandardCode="">{scraper_}<description/></term>
-        <term HeuristID="0-5236" StandardCode="">{scrapother}<description/></term>
-        <term HeuristID="0-5229" StandardCode="">{unifpt_}<description/></term>
+        <term pictureURL="" HeuristID="0-5228" StandardCode="">{backed_}<description/></term>
+        <term pictureURL="" HeuristID="0-5230" StandardCode="">{bifac_}<description/></term>
+        <term pictureURL="" HeuristID="0-5226" StandardCode="">{notch_}<description/></term>
+        <term pictureURL="" HeuristID="0-5233" StandardCode="">{notchback_}<description/></term>
+        <term pictureURL="" HeuristID="0-5234" StandardCode="">{notchother_}<description/></term>
+        <term pictureURL="" HeuristID="0-5232" StandardCode="">{notchscrap_}<description/></term>
+        <term pictureURL="" HeuristID="0-5231" StandardCode="">{otherru_}<description/></term>
+        <term pictureURL="" HeuristID="0-5235" StandardCode="">{scrapback_}<description/></term>
+        <term pictureURL="" HeuristID="0-5227" StandardCode="">{scraper_}<description/></term>
+        <term pictureURL="" HeuristID="0-5236" StandardCode="">{scrapother}<description/></term>
+        <term pictureURL="" HeuristID="0-5229" StandardCode="">{unifpt_}<description/></term>
       </lookup>
     </property>
     <property name="Unmod types" type="enum">
       <description>Unmod types?</description>
       <lookup>
-        <term HeuristID="0-5244" StandardCode="">{all_}<description/></term>
-        <term HeuristID="0-5245" StandardCode="">{indet}<description/></term>
-        <term HeuristID="0-5242" StandardCode="">{nodpeb_}<description/></term>
-        <term HeuristID="0-5241" StandardCode="">{nodslab_}<description/></term>
-        <term HeuristID="0-5238" StandardCode="">{nodule_}<description/></term>
-        <term HeuristID="0-5240" StandardCode="">{pebble_}<description/></term>
-        <term HeuristID="0-5239" StandardCode="">{slab_}<description/></term>
-        <term HeuristID="0-5243" StandardCode="">{slabpeb_}<description/></term>
+        <term pictureURL="" HeuristID="0-5244" StandardCode="">{all_}<description/></term>
+        <term pictureURL="" HeuristID="0-5245" StandardCode="">{indet}<description/></term>
+        <term pictureURL="" HeuristID="0-5242" StandardCode="">{nodpeb_}<description/></term>
+        <term pictureURL="" HeuristID="0-5241" StandardCode="">{nodslab_}<description/></term>
+        <term pictureURL="" HeuristID="0-5238" StandardCode="">{nodule_}<description/></term>
+        <term pictureURL="" HeuristID="0-5240" StandardCode="">{pebble_}<description/></term>
+        <term pictureURL="" HeuristID="0-5239" StandardCode="">{slab_}<description/></term>
+        <term pictureURL="" HeuristID="0-5243" StandardCode="">{slabpeb_}<description/></term>
       </lookup>
     </property>
     <property name="Ground material" type="enum">
       <description>Ground material?</description>
       <lookup>
-        <term HeuristID="0-5252" StandardCode="">{amorph_}<description/></term>
-        <term HeuristID="0-5251" StandardCode="">{grooved_}<description/></term>
-        <term HeuristID="0-5247" StandardCode="">{millstone_}<description/></term>
-        <term HeuristID="0-5249" StandardCode="">{mortar_}<description/></term>
-        <term HeuristID="0-5248" StandardCode="">{muller_}<description/></term>
-        <term HeuristID="0-5250" StandardCode="">{pestle_}<description/></term>
-        <term HeuristID="0-5253" StandardCode="">{undiag}<description/></term>
+        <term pictureURL="" HeuristID="0-5252" StandardCode="">{amorph_}<description/></term>
+        <term pictureURL="" HeuristID="0-5251" StandardCode="">{grooved_}<description/></term>
+        <term pictureURL="" HeuristID="0-5247" StandardCode="">{millstone_}<description/></term>
+        <term pictureURL="" HeuristID="0-5249" StandardCode="">{mortar_}<description/></term>
+        <term pictureURL="" HeuristID="0-5248" StandardCode="">{muller_}<description/></term>
+        <term pictureURL="" HeuristID="0-5250" StandardCode="">{pestle_}<description/></term>
+        <term pictureURL="" HeuristID="0-5253" StandardCode="">{undiag}<description/></term>
       </lookup>
     </property>
     <property name="Ground material status" type="enum">
@@ -182,38 +182,38 @@
     <property name="Artefact raw material" type="enum">
       <description>Artefact raw material?</description>
       <lookup>
-        <term HeuristID="0-5272" StandardCode="">{coarsgran_}<description/></term>
-        <term HeuristID="0-5274" StandardCode="">{coarsqtz_}<description/></term>
-        <term HeuristID="0-5273" StandardCode="">{coarsqtzite_}<description/></term>
-        <term HeuristID="0-5275" StandardCode="">{coarssands_}<description/></term>
-        <term HeuristID="0-5267" StandardCode="">{finecoarse_}<description/></term>
-        <term HeuristID="0-5268" StandardCode="">{finegran_}<description/></term>
-        <term HeuristID="0-5270" StandardCode="">{fineqtz_}<description/></term>
-        <term HeuristID="0-5269" StandardCode="">{fineqtzite_}<description/></term>
-        <term HeuristID="0-5271" StandardCode="">{finesandst_}<description/></term>
-        <term HeuristID="0-5277" StandardCode="">{granqtz_}<description/></term>
-        <term HeuristID="0-5276" StandardCode="">{granqtzite_}<description/></term>
-        <term HeuristID="0-5278" StandardCode="">{gransandst_}<description/></term>
-        <term HeuristID="0-5264" StandardCode="">{ironst_}<description/></term>
-        <term HeuristID="0-5266" StandardCode="">{other_}<description/></term>
-        <term HeuristID="0-5263" StandardCode="">{qtz_}<description/></term>
-        <term HeuristID="0-5262" StandardCode="">{qtzite_}<description/></term>
-        <term HeuristID="0-5279" StandardCode="">{qtziteqtz_}<description/></term>
-        <term HeuristID="0-5280" StandardCode="">{qtzitsandst_}<description/></term>
-        <term HeuristID="0-5265" StandardCode="">{sandst_}<description/></term>
-        <term HeuristID="0-5260" StandardCode="">{silccoars_}<description/></term>
-        <term HeuristID="0-5259" StandardCode="">{silcfine_}<description/></term>
-        <term HeuristID="0-5261" StandardCode="">{silcgran_}<description/></term>
+        <term pictureURL="" HeuristID="0-5272" StandardCode="">{coarsgran_}<description/></term>
+        <term pictureURL="" HeuristID="0-5274" StandardCode="">{coarsqtz_}<description/></term>
+        <term pictureURL="" HeuristID="0-5273" StandardCode="">{coarsqtzite_}<description/></term>
+        <term pictureURL="" HeuristID="0-5275" StandardCode="">{coarssands_}<description/></term>
+        <term pictureURL="" HeuristID="0-5267" StandardCode="">{finecoarse_}<description/></term>
+        <term pictureURL="" HeuristID="0-5268" StandardCode="">{finegran_}<description/></term>
+        <term pictureURL="" HeuristID="0-5270" StandardCode="">{fineqtz_}<description/></term>
+        <term pictureURL="" HeuristID="0-5269" StandardCode="">{fineqtzite_}<description/></term>
+        <term pictureURL="" HeuristID="0-5271" StandardCode="">{finesandst_}<description/></term>
+        <term pictureURL="" HeuristID="0-5277" StandardCode="">{granqtz_}<description/></term>
+        <term pictureURL="" HeuristID="0-5276" StandardCode="">{granqtzite_}<description/></term>
+        <term pictureURL="" HeuristID="0-5278" StandardCode="">{gransandst_}<description/></term>
+        <term pictureURL="" HeuristID="0-5264" StandardCode="">{ironst_}<description/></term>
+        <term pictureURL="" HeuristID="0-5266" StandardCode="">{other_}<description/></term>
+        <term pictureURL="" HeuristID="0-5263" StandardCode="">{qtz_}<description/></term>
+        <term pictureURL="" HeuristID="0-5262" StandardCode="">{qtzite_}<description/></term>
+        <term pictureURL="" HeuristID="0-5279" StandardCode="">{qtziteqtz_}<description/></term>
+        <term pictureURL="" HeuristID="0-5280" StandardCode="">{qtzitsandst_}<description/></term>
+        <term pictureURL="" HeuristID="0-5265" StandardCode="">{sandst_}<description/></term>
+        <term pictureURL="" HeuristID="0-5260" StandardCode="">{silccoars_}<description/></term>
+        <term pictureURL="" HeuristID="0-5259" StandardCode="">{silcfine_}<description/></term>
+        <term pictureURL="" HeuristID="0-5261" StandardCode="">{silcgran_}<description/></term>
       </lookup>
     </property>
     <property name="Other worked material" type="enum">
       <description>Other worked material?</description>
       <lookup>
-        <term HeuristID="0-5282" StandardCode="">{bone_}<description/></term>
-        <term HeuristID="0-5285" StandardCode="">{facetochre_}<description/></term>
-        <term HeuristID="0-5284" StandardCode="">{ochre_}<description/></term>
-        <term HeuristID="0-5286" StandardCode="">{qtzxtal}<description/></term>
-        <term HeuristID="0-5283" StandardCode="">{shell_}<description/></term>
+        <term pictureURL="" HeuristID="0-5282" StandardCode="">{bone_}<description/></term>
+        <term pictureURL="" HeuristID="0-5285" StandardCode="">{facetochre_}<description/></term>
+        <term pictureURL="" HeuristID="0-5284" StandardCode="">{ochre_}<description/></term>
+        <term pictureURL="" HeuristID="0-5286" StandardCode="">{qtzxtal}<description/></term>
+        <term pictureURL="" HeuristID="0-5283" StandardCode="">{shell_}<description/></term>
       </lookup>
     </property>
   </RelationshipElement>
@@ -228,22 +228,22 @@
     <property name="Hearth Type" type="enum">
       <description>type of hearth</description>
       <lookup>
-        <term HeuristID="0-5040" StandardCode="">{Heat_retainer}<description/>
-            <term HeuristID="0-5044" StandardCode="">{hscarb}<description>Carbonate hearthstones</description></term>
-            <term HeuristID="0-5043" StandardCode="">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
-            <term HeuristID="0-5047" StandardCode="">{hsindet}<description>Hearthstones of indeterminate material</description></term>
-            <term HeuristID="0-5046" StandardCode="">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
-            <term HeuristID="0-5045" StandardCode="">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
+        <term pictureURL="" HeuristID="0-5040" StandardCode="">{Heat_retainer}<description/>
+            <term pictureURL= HeuristID="0-5044" StandardCode="">{hscarb}<description>Carbonate hearthstones</description></term>
+            <term pictureURL= HeuristID="0-5043" StandardCode="">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
+            <term pictureURL= HeuristID="0-5047" StandardCode="">{hsindet}<description>Hearthstones of indeterminate material</description></term>
+            <term pictureURL= HeuristID="0-5046" StandardCode="">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
+            <term pictureURL= HeuristID="0-5045" StandardCode="">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
         </term>
-        <term HeuristID="0-5041" StandardCode="">{Non-heat_retainer}<description/>
-            <term HeuristID="0-5052" StandardCode="">{ashlens}<description/></term>
-            <term HeuristID="0-5051" StandardCode="">{ashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
-            <term HeuristID="0-5049" StandardCode="">{baked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
-            <term HeuristID="0-5050" StandardCode="">{bakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
-            <term HeuristID="0-5053" StandardCode="">{charclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
-            <term HeuristID="0-5048" StandardCode="">{emupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
-            <term HeuristID="0-5055" StandardCode="">{other}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
-            <term HeuristID="0-5054" StandardCode="">{staining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
+        <term pictureURL="" HeuristID="0-5041" StandardCode="">{Non-heat_retainer}<description/>
+            <term pictureURL="" HeuristID="0-5052" StandardCode="">{ashlens}<description/></term>
+            <term pictureURL="" HeuristID="0-5051" StandardCode="">{ashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
+            <term pictureURL="" HeuristID="0-5049" StandardCode="">{baked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
+            <term pictureURL="" HeuristID="0-5050" StandardCode="">{bakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
+            <term pictureURL="" HeuristID="0-5053" StandardCode="">{charclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
+            <term pictureURL="" HeuristID="0-5048" StandardCode="">{emupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
+            <term pictureURL="" HeuristID="0-5055" StandardCode="">{other}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
+            <term pictureURL="" HeuristID="0-5054" StandardCode="">{staining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
         </term>
       </lookup>
     </property>
@@ -253,116 +253,92 @@
     <property name="Charcoal" type="enum">
       <description>Is there any charcoal associated with the hearth, if so, in what form?</description>
       <lookup>
-        <term HeuristID="0-5062" StandardCode="">{dissem}<description>Disseminated</description></term>
-        <term HeuristID="0-5063" StandardCode="">{flecks}<description/></term>
-        <term HeuristID="0-5065" StandardCode="">{indet}<description>Indeterminate</description></term>
-        <term HeuristID="0-5064" StandardCode="">{lumps}<description/></term>
-        <term HeuristID="0-5061" StandardCode="">{none}<description/></term>
+        <term pictureURL="" HeuristID="0-5062" StandardCode="">{dissem}<description>Disseminated</description></term>
+        <term pictureURL="" HeuristID="0-5063" StandardCode="">{flecks}<description/></term>
+        <term pictureURL="" HeuristID="0-5065" StandardCode="">{indet}<description>Indeterminate</description></term>
+        <term pictureURL="" HeuristID="0-5064" StandardCode="">{lumps}<description/></term>
+        <term pictureURL="" HeuristID="0-5061" StandardCode="">{none}<description/></term>
       </lookup>
     </property>
     <property name="Degree in situ" type="enum">
       <description>Exposure of the hearth</description>
       <lookup>
-        <term HeuristID="0-5071" StandardCode="">{ambig_}<description>Ambiguous</description></term>
-        <term HeuristID="0-5067" StandardCode="">{most_}<description>Mostly in situ</description></term>
-        <term HeuristID="0-5070" StandardCode="">{recement_}<description>Feature is recemented</description></term>
-        <term HeuristID="0-5068" StandardCode="">{some}<description/></term>
-        <term HeuristID="0-5069" StandardCode="">{surface}<description>Surface is in situ</description></term>
-      </lookup>
-    </property>
-    <property name="Modification of heat retainer hearths" type="enum">
-      <description>Have heat retainer hearths been modified?</description>
-      <lookup>
-        <term HeuristID="0-5075" StandardCode="">{dispers}<description/></term>
-        <term HeuristID="0-5079" StandardCode="">{dispol}<description/></term>
-        <term HeuristID="0-5074" StandardCode="">{frag}<description/></term>
-        <term HeuristID="0-5076" StandardCode="">{fragdisp}<description/></term>
-        <term HeuristID="0-5080" StandardCode="">{fragdispol}<description/></term>
-        <term HeuristID="0-5078" StandardCode="">{fragpol}<description/></term>
-        <term HeuristID="0-5073" StandardCode="">{none}<description/></term>
-        <term HeuristID="0-5077" StandardCode="">{polish}<description/></term>
-      </lookup>
-    </property>
-    <property name="Modification of non heat retainer hearths" type="enum">
-      <description>Have non heat retainer hearths been modified?</description>
-      <lookup>
-        <term HeuristID="0-5087" StandardCode="">{gul}<description/></term>
-        <term HeuristID="0-5084" StandardCode="">{incrill}<description/></term>
-        <term HeuristID="0-5082" StandardCode="">{none}<description/></term>
-        <term HeuristID="0-5085" StandardCode="">{rill}<description/></term>
-        <term HeuristID="0-5086" StandardCode="">{undercut}<description/></term>
-        <term HeuristID="0-5083" StandardCode="">{weather}<description/></term>
+        <term pictureURL="" HeuristID="0-5071" StandardCode="">{ambig_}<description>Ambiguous</description></term>
+        <term pictureURL="" HeuristID="0-5067" StandardCode="">{most_}<description>Mostly in situ</description></term>
+        <term pictureURL="" HeuristID="0-5070" StandardCode="">{recement_}<description>Feature is recemented</description></term>
+        <term pictureURL="" HeuristID="0-5068" StandardCode="">{some}<description/></term>
+        <term pictureURL="" HeuristID="0-5069" StandardCode="">{surface}<description>Surface is in situ</description></term>
       </lookup>
     </property>
     <property name="Topo setting" type="enum">
       <description>What is the topographic setting of the feature?</description>
       <lookup>
-        <term HeuristID="0-5090" StandardCode="">{_LT6degree_}<description/></term>
-        <term HeuristID="0-5091" StandardCode="">{6-12deg_}<description/></term>
-        <term HeuristID="0-5092" StandardCode="">{GT12degree_}<description/></term>
-        <term HeuristID="0-5104" StandardCode="">{chanfloor_}<description/></term>
-        <term HeuristID="0-5105" StandardCode="">{chanwall__}<description/></term>
-        <term HeuristID="0-5100" StandardCode="">{deepgulfl_}<description/></term>
-        <term HeuristID="0-5101" StandardCode="">{deepgulwal_}<description/></term>
-        <term HeuristID="0-5089" StandardCode="">{platform}<description/></term>
-        <term HeuristID="0-5103" StandardCode="">{residside_}<description/></term>
-        <term HeuristID="0-5102" StandardCode="">{residtop_}<description/></term>
-        <term HeuristID="0-5096" StandardCode="">{ridge_}<description/></term>
-        <term HeuristID="0-5097" StandardCode="">{ridgerill_}<description/></term>
-        <term HeuristID="0-5094" StandardCode="">{rillfloor_}<description/></term>
-        <term HeuristID="0-5095" StandardCode="">{rillwall_}<description/></term>
-        <term HeuristID="0-5098" StandardCode="">{shalgulfl_}<description/></term>
-        <term HeuristID="0-5099" StandardCode="">{shalgulwal_}<description/></term>
-        <term HeuristID="0-5093" StandardCode="">{shallrill_}<description/></term>
+        <term pictureURL="" HeuristID="0-5090" StandardCode="">{_LT6degree_}<description/></term>
+        <term pictureURL="" HeuristID="0-5091" StandardCode="">{6-12deg_}<description/></term>
+        <term pictureURL="" HeuristID="0-5092" StandardCode="">{GT12degree_}<description/></term>
+        <term pictureURL="" HeuristID="0-5104" StandardCode="">{chanfloor_}<description/></term>
+        <term pictureURL="" HeuristID="0-5105" StandardCode="">{chanwall__}<description/></term>
+        <term pictureURL="" HeuristID="0-5100" StandardCode="">{deepgulfl_}<description/></term>
+        <term pictureURL="" HeuristID="0-5101" StandardCode="">{deepgulwal_}<description/></term>
+        <term pictureURL="" HeuristID="0-5089" StandardCode="">{platform}<description/></term>
+        <term pictureURL="" HeuristID="0-5103" StandardCode="">{residside_}<description/></term>
+        <term pictureURL="" HeuristID="0-5102" StandardCode="">{residtop_}<description/></term>
+        <term pictureURL="" HeuristID="0-5096" StandardCode="">{ridge_}<description/></term>
+        <term pictureURL="" HeuristID="0-5097" StandardCode="">{ridgerill_}<description/></term>
+        <term pictureURL="" HeuristID="0-5094" StandardCode="">{rillfloor_}<description/></term>
+        <term pictureURL="" HeuristID="0-5095" StandardCode="">{rillwall_}<description/></term>
+        <term pictureURL="" HeuristID="0-5098" StandardCode="">{shalgulfl_}<description/></term>
+        <term pictureURL="" HeuristID="0-5099" StandardCode="">{shalgulwal_}<description/></term>
+        <term pictureURL="" HeuristID="0-5093" StandardCode="">{shallrill_}<description/></term>
       </lookup>
     </property>
     <property name="Sediments" type="enum">
       <description>What is the surrounding sediment?</description>
       <lookup>
-        <term HeuristID="0-5117" StandardCode="">{alternat_}<description/></term>
-        <term HeuristID="0-5116" StandardCode="">{bedsandyclay_}<description/></term>
-        <term HeuristID="0-5110" StandardCode="">{brownsand_}<description/></term>
-        <term HeuristID="0-5108" StandardCode="">{brownsoil_}<description/></term>
-        <term HeuristID="0-5122" StandardCode="">{carblag_}<description/></term>
-        <term HeuristID="0-5126" StandardCode="">{carbpavemt_}<description/></term>
-        <term HeuristID="0-5127" StandardCode="">{carbrework_}<description/></term>
-        <term HeuristID="0-5125" StandardCode="">{carbsoft_}<description/></term>
-        <term HeuristID="0-5124" StandardCode="">{Chorizon_}<description/></term>
-        <term HeuristID="0-5118" StandardCode="">{claylens_}<description/></term>
-        <term HeuristID="0-5120" StandardCode="">{cobble_}<description/></term>
-        <term HeuristID="0-5123" StandardCode="">{ggC_}<description/></term>
-        <term HeuristID="0-5121" StandardCode="">{gglag_}<description/></term>
-        <term HeuristID="0-5113" StandardCode="">{greenclay_}<description/></term>
-        <term HeuristID="0-5128" StandardCode="">{indet}<description/></term>
-        <term HeuristID="0-5114" StandardCode="">{otherclay_}<description/></term>
-        <term HeuristID="0-5112" StandardCode="">{othersand_}<description/></term>
-        <term HeuristID="0-5109" StandardCode="">{redsand_}<description/></term>
-        <term HeuristID="0-5107" StandardCode="">{redsoil_}<description/></term>
-        <term HeuristID="0-5119" StandardCode="">{sandlens_}<description/></term>
-        <term HeuristID="0-5115" StandardCode="">{sandyclay_}<description/></term>
-        <term HeuristID="0-5111" StandardCode="">{whitesand_}<description/></term>
+        <term pictureURL="" HeuristID="0-5117" StandardCode="">{alternat_}<description/></term>
+        <term pictureURL="" HeuristID="0-5116" StandardCode="">{bedsandyclay_}<description/></term>
+        <term pictureURL="" HeuristID="0-5110" StandardCode="">{brownsand_}<description/></term>
+        <term pictureURL="" HeuristID="0-5108" StandardCode="">{brownsoil_}<description/></term>
+        <term pictureURL="" HeuristID="0-5122" StandardCode="">{carblag_}<description/></term>
+        <term pictureURL="" HeuristID="0-5126" StandardCode="">{carbpavemt_}<description/></term>
+        <term pictureURL="" HeuristID="0-5127" StandardCode="">{carbrework_}<description/></term>
+        <term pictureURL="" HeuristID="0-5125" StandardCode="">{carbsoft_}<description/></term>
+        <term pictureURL="" HeuristID="0-5124" StandardCode="">{Chorizon_}<description/></term>
+        <term pictureURL="" HeuristID="0-5118" StandardCode="">{claylens_}<description/></term>
+        <term pictureURL="" HeuristID="0-5120" StandardCode="">{cobble_}<description/></term>
+        <term pictureURL="" HeuristID="0-5123" StandardCode="">{ggC_}<description/></term>
+        <term pictureURL="" HeuristID="0-5121" StandardCode="">{gglag_}<description/></term>
+        <term pictureURL="" HeuristID="0-5113" StandardCode="">{greenclay_}<description/></term>
+        <term pictureURL="" HeuristID="0-5128" StandardCode="">{indet}<description/></term>
+        <term pictureURL="" HeuristID="0-5114" StandardCode="">{otherclay_}<description/></term>
+        <term pictureURL="" HeuristID="0-5112" StandardCode="">{othersand_}<description/></term>
+        <term pictureURL="" HeuristID="0-5109" StandardCode="">{redsand_}<description/></term>
+        <term pictureURL="" HeuristID="0-5107" StandardCode="">{redsoil_}<description/></term>
+        <term pictureURL="" HeuristID="0-5119" StandardCode="">{sandlens_}<description/></term>
+        <term pictureURL="" HeuristID="0-5115" StandardCode="">{sandyclay_}<description/></term>
+        <term pictureURL="" HeuristID="0-5111" StandardCode="">{whitesand_}<description/></term>
       </lookup>
     </property>
     <property name="Vulnerability" type="enum">
       <description>How vulnerable is the feature?</description>
       <lookup>
-        <term HeuristID="0-5133" StandardCode="">{extreme}<description/></term>
-        <term HeuristID="0-5132" StandardCode="">{high_}<description/></term>
-        <term HeuristID="0-5130" StandardCode="">{low_}<description/></term>
-        <term HeuristID="0-5131" StandardCode="">{moderate_}<description/></term>
+        <term pictureURL="" HeuristID="0-5133" StandardCode="">{extreme}<description/></term>
+        <term pictureURL="" HeuristID="0-5132" StandardCode="">{high_}<description/></term>
+        <term pictureURL="" HeuristID="0-5130" StandardCode="">{low_}<description/></term>
+        <term pictureURL="" HeuristID="0-5131" StandardCode="">{moderate_}<description/></term>
       </lookup>
     </property>
     <property name="Palaeotop setting" type="enum">
       <description>Select from the list what the feature palaeotopographic setting is.</description>
       <lookup>
-        <term HeuristID="0-5136" StandardCode="">{backdune_}<description/></term>
-        <term HeuristID="0-5137" StandardCode="">{beach_}<description/></term>
-        <term HeuristID="0-5139" StandardCode="">{crest_}<description/></term>
-        <term HeuristID="0-5135" StandardCode="">{foredune_}<description/></term>
-        <term HeuristID="0-5142" StandardCode="">{indet}<description/></term>
-        <term HeuristID="0-5138" StandardCode="">{lakebed_}<description/></term>
-        <term HeuristID="0-5141" StandardCode="">{other_}<description/></term>
-        <term HeuristID="0-5140" StandardCode="">{spit_}<description/></term>
+        <term pictureURL="" HeuristID="0-5136" StandardCode="">{backdune_}<description/></term>
+        <term pictureURL="" HeuristID="0-5137" StandardCode="">{beach_}<description/></term>
+        <term pictureURL="" HeuristID="0-5139" StandardCode="">{crest_}<description/></term>
+        <term pictureURL="" HeuristID="0-5135" StandardCode="">{foredune_}<description/></term>
+        <term pictureURL="" HeuristID="0-5142" StandardCode="">{indet}<description/></term>
+        <term pictureURL="" HeuristID="0-5138" StandardCode="">{lakebed_}<description/></term>
+        <term pictureURL="" HeuristID="0-5141" StandardCode="">{other_}<description/></term>
+        <term pictureURL="" HeuristID="0-5140" StandardCode="">{spit_}<description/></term>
     </lookup>
     </property>
     <property name="Types of Photographs taken" type="enum">
