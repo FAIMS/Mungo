@@ -39,15 +39,15 @@
     <property name="Lacustrine Material" type="enum">
       <description>Associated lacustrine material</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5175" StandardCode="">{boneandotol_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5173" StandardCode="">{exoskel_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5170" StandardCode="">{fishbone_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5172" StandardCode="">{gastrolith_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5174" StandardCode="">{mussbone_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5176" StandardCode="">{mussboneot_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5169" StandardCode="">{mussel_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5177" StandardCode="">{mussotol_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5171" StandardCode="">{otoliths_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/boneandotol.png">{boneandotol_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/exoskel.png">{exoskel_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/fishbone.png">{fishbone_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/gastrolith.png">{gastrolith_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/mussbone.png">{mussbone_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/mussboneot.png">{mussboneot_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/mussel.png">{mussel_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/mussotol.png">{mussotol_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/otoliths.png">{otoliths_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt lacustrine material" type="enum">
@@ -60,12 +60,12 @@
     <property name="Associated terrestrial bone" type="enum">
       <description>Is there associated terrestrial bone?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5185" StandardCode="">{birdbone_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5184" StandardCode="">{mammal_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5187" StandardCode="">{other_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5186" StandardCode="">{reptile_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5189" StandardCode="">{undiag}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5188" StandardCode="">{unident_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/birdbone.png">{birdbone_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/mammal.png">{mammal_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/other.png">{other_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/reptile.png">{reptile_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/undiag.png">{undiag}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/unident.png">{unident_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt bone" type="enum">
@@ -78,13 +78,13 @@
     <property name="Associated eggshell" type="enum">
       <description>Is there an associated eggshell</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5191" StandardCode="">{emu_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5194" StandardCode="">{emugenyo_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5195" StandardCode="">{emuoth_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5192" StandardCode="">{genyo_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5196" StandardCode="">{genyooth_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5197" StandardCode="">{indet}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5193" StandardCode="">{other_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/emu.png">{emu_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/emugenyo.png">{emugenyo_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/emuoth.png">{emuoth_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/genyo.png">{genyo_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/genyooth.png">{genyooth_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/indet.png">{indet}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/other.png">{other_}<description/></term>
       </lookup>
     </property>
     <property name="Burnt eggshell" type="enum">
@@ -133,42 +133,42 @@
     <property name="RU types" type="enum">
       <description>RU types?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5228" StandardCode="">{backed_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5230" StandardCode="">{bifac_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5226" StandardCode="">{notch_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5233" StandardCode="">{notchback_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5234" StandardCode="">{notchother_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5232" StandardCode="">{notchscrap_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5231" StandardCode="">{otherru_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5235" StandardCode="">{scrapback_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5227" StandardCode="">{scraper_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5236" StandardCode="">{scrapother}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5229" StandardCode="">{unifpt_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/backed.png">{backed_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/bifac.png">{bifac_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/notch.png">{notch_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/notchback.png">{notchback_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/notchother.png">{notchother_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/notchscrap.png">{notchscrap_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/otherru.png">{otherru_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/scrapback.png">{scrapback_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/scraper.png">{scraper_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/scrapother.png">{scrapother}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/unifpt.png">{unifpt_}<description/></term>
       </lookup>
     </property>
     <property name="Unmod types" type="enum">
       <description>Unmod types?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5244" StandardCode="">{all_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5245" StandardCode="">{indet}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5242" StandardCode="">{nodpeb_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5241" StandardCode="">{nodslab_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5238" StandardCode="">{nodule_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5240" StandardCode="">{pebble_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5239" StandardCode="">{slab_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5243" StandardCode="">{slabpeb_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/all.png">{all_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/indet.png">{indet}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/nodpeb.png">{nodpeb_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/nodslab.png">{nodslab_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/nodule.png">{nodule_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/pebble.png">{pebble_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/slab.png">{slab_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/slabpeb.png">{slabpeb_}<description/></term>
       </lookup>
     </property>
     <property name="Ground material" type="enum">
       <description>Ground material?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5252" StandardCode="">{amorph_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5251" StandardCode="">{grooved_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5247" StandardCode="">{millstone_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5249" StandardCode="">{mortar_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5248" StandardCode="">{muller_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5250" StandardCode="">{pestle_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5253" StandardCode="">{undiag}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/amorph.png">{amorph_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/grooved.png">{grooved_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/millstone.png">{millstone_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/mortar.png">{mortar_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/muller.png">{muller_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/pestle.png">{pestle_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ground/undiag.png">{undiag}<description/></term>
       </lookup>
     </property>
     <property name="Ground material status" type="enum">
@@ -182,38 +182,38 @@
     <property name="Artefact raw material" type="enum">
       <description>Artefact raw material?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5272" StandardCode="">{coarsgran_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5274" StandardCode="">{coarsqtz_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5273" StandardCode="">{coarsqtzite_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5275" StandardCode="">{coarssands_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5267" StandardCode="">{finecoarse_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5268" StandardCode="">{finegran_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5270" StandardCode="">{fineqtz_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5269" StandardCode="">{fineqtzite_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5271" StandardCode="">{finesandst_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5277" StandardCode="">{granqtz_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5276" StandardCode="">{granqtzite_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5278" StandardCode="">{gransandst_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5264" StandardCode="">{ironst_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5266" StandardCode="">{other_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5263" StandardCode="">{qtz_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5262" StandardCode="">{qtzite_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5279" StandardCode="">{qtziteqtz_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5280" StandardCode="">{qtzitsandst_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5265" StandardCode="">{sandst_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5260" StandardCode="">{silccoars_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5259" StandardCode="">{silcfine_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5261" StandardCode="">{silcgran_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/coarsgran.png">{coarsgran_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/coarsqtz.png">{coarsqtz_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/coarsqtzite.png">{coarsqtzite_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/coarssands.png">{coarssands_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/finecoarse.png">{finecoarse_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/finegran.png">{finegran_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/fineqtz.png">{fineqtz_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/fineqtzite.png">{fineqtzite_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/finesandst.png">{finesandst_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/granqtz.png">{granqtz_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/granqtzite.png">{granqtzite_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/gransandst.png">{gransandst_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/ironst.png">{ironst_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/other.png">{other_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtz.png">{qtz_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtzite.png">{qtzite_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtziteqtz.png">{qtziteqtz_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtzitsandst.png">{qtzitsandst_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/sandst.png">{sandst_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silccoars.png">{silccoars_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silcfine.png">{silcfine_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silcgran.png">{silcgran_}<description/></term>
       </lookup>
     </property>
     <property name="Other worked material" type="enum">
       <description>Other worked material?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5282" StandardCode="">{bone_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5285" StandardCode="">{facetochre_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5284" StandardCode="">{ochre_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5286" StandardCode="">{qtzxtal}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5283" StandardCode="">{shell_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherbone.png">{bone_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherfacetochre.png">{facetochre_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherochre.png">{ochre_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherqtzxtal.png">{qtzxtal}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other/othershell.png">{shell_}<description/></term>
       </lookup>
     </property>
   </RelationshipElement>
@@ -228,22 +228,22 @@
     <property name="Hearth Type" type="enum">
       <description>type of hearth</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5040" StandardCode="">{Heat_retainer}<description/>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5044" StandardCode="">{hscarb}<description>Carbonate hearthstones</description></term>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5043" StandardCode="">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5047" StandardCode="">{hsindet}<description>Hearthstones of indeterminate material</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5046" StandardCode="">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5045" StandardCode="">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
+        <term pictureURL="files/data/gallery/hearth/Heat_retainer.png">{Heat_retainer}<description/>
+            <term pictureURL="files/data/gallery/hearth/hscarb.png">{hscarb}<description>Carbonate hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hsclay.png">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hsindet.png">{hsindet}<description>Hearthstones of indeterminate material</description></term>
+            <term pictureURL="files/data/gallery/hearth/hsother.png">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hsterm.png">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
         </term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5041" StandardCode="">{Non-heat_retainer}<description/>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5052" StandardCode="">{ashlens}<description/></term>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5051" StandardCode="">{ashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5049" StandardCode="">{baked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5050" StandardCode="">{bakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5053" StandardCode="">{charclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5048" StandardCode="">{emupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
-            <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5055" StandardCode="">{other}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
-            <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5054" StandardCode="">{staining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
+        <term pictureURL="files/data/gallery/hearth/Non-heat_retainer.png">{Non-heat_retainer}<description/>
+            <term pictureURL="files/data/gallery/hearth/ashlens.png">{ashlens}<description/></term>
+            <term pictureURL="files/data/gallery/hearth/ashpatch.png">{ashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
+            <term pictureURL="files/data/gallery/hearth/baked_clay.png">{baked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
+            <term pictureURL="files/data/gallery/hearth/bakedsed.png">{bakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
+            <term pictureURL="files/data/gallery/hearth/charclens.png">{charclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
+            <term pictureURL="files/data/gallery/hearth/emupat.png">{emupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
+            <term pictureURL="files/data/gallery/hearth/other.png">{other}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
+            <term pictureURL="files/data/gallery/hearth/staining.png">{staining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
         </term>
       </lookup>
     </property>
@@ -253,92 +253,92 @@
     <property name="Charcoal" type="enum">
       <description>Is there any charcoal associated with the hearth, if so, in what form?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5062" StandardCode="">{dissem}<description>Disseminated</description></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5063" StandardCode="">{flecks}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5065" StandardCode="">{indet}<description>Indeterminate</description></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5064" StandardCode="">{lumps}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5061" StandardCode="">{none}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/dissem.png">{dissem}<description>Disseminated</description></term>
+        <term pictureURL="files/data/gallery/hearth/flecks.png">{flecks}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/indet.png">{indet}<description>Indeterminate</description></term>
+        <term pictureURL="files/data/gallery/hearth/lumps.png">{lumps}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/none.png">{none}<description/></term>
       </lookup>
     </property>
     <property name="Degree in situ" type="enum">
       <description>Exposure of the hearth</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5071" StandardCode="">{ambig_}<description>Ambiguous</description></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5067" StandardCode="">{most_}<description>Mostly in situ</description></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5070" StandardCode="">{recement_}<description>Feature is recemented</description></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5068" StandardCode="">{some}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5069" StandardCode="">{surface}<description>Surface is in situ</description></term>
+        <term pictureURL="files/data/gallery/hearth/ambig.png">{ambig_}<description>Ambiguous</description></term>
+        <term pictureURL="files/data/gallery/hearth/most.png">{most_}<description>Mostly in situ</description></term>
+        <term pictureURL="files/data/gallery/hearth/recement.png">{recement_}<description>Feature is recemented</description></term>
+        <term pictureURL="files/data/gallery/hearth/some.png">{some}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/surface.png">{surface}<description>Surface is in situ</description></term>
       </lookup>
     </property>
     <property name="Topo setting" type="enum">
       <description>What is the topographic setting of the feature?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5090" StandardCode="">{_LT6degree_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5091" StandardCode="">{6-12deg_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5092" StandardCode="">{GT12degree_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5104" StandardCode="">{chanfloor_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5105" StandardCode="">{chanwall__}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5100" StandardCode="">{deepgulfl_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5101" StandardCode="">{deepgulwal_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5089" StandardCode="">{platform}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5103" StandardCode="">{residside_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5102" StandardCode="">{residtop_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5096" StandardCode="">{ridge_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5097" StandardCode="">{ridgerill_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5094" StandardCode="">{rillfloor_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5095" StandardCode="">{rillwall_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5098" StandardCode="">{shalgulfl_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5099" StandardCode="">{shalgulwal_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5093" StandardCode="">{shallrill_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/_LT6degree.png">{_LT6degree_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/6-12deg.png">{6-12deg_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/GT12degree.png">{GT12degree_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/chanfloor.png">{chanfloor_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/chanwall_.png">{chanwall__}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/deepgulfl.png">{deepgulfl_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/deepgulwal.png">{deepgulwal_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/platform.png">{platform}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/residside.png">{residside_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/residtop.png">{residtop_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ridge.png">{ridge_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ridgerill.png">{ridgerill_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/rillfloor.png">{rillfloor_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/rillwall.png">{rillwall_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/shalgulfl.png">{shalgulfl_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/shalgulwal.png">{shalgulwal_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/shallrill.png">{shallrill_}<description/></term>
       </lookup>
     </property>
     <property name="Sediments" type="enum">
       <description>What is the surrounding sediment?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5117" StandardCode="">{alternat_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5116" StandardCode="">{bedsandyclay_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5110" StandardCode="">{brownsand_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5108" StandardCode="">{brownsoil_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5122" StandardCode="">{carblag_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5126" StandardCode="">{carbpavemt_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5127" StandardCode="">{carbrework_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5125" StandardCode="">{carbsoft_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5124" StandardCode="">{Chorizon_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5118" StandardCode="">{claylens_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5120" StandardCode="">{cobble_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5123" StandardCode="">{ggC_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5121" StandardCode="">{gglag_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5113" StandardCode="">{greenclay_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5128" StandardCode="">{indet}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5114" StandardCode="">{otherclay_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5112" StandardCode="">{othersand_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5109" StandardCode="">{redsand_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5107" StandardCode="">{redsoil_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5119" StandardCode="">{sandlens_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5115" StandardCode="">{sandyclay_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5111" StandardCode="">{whitesand_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/alternat.png">{alternat_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bedsandyclay.png">{bedsandyclay_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/brownsand.png">{brownsand_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/brownsoil.png">{brownsoil_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/carblag.png">{carblag_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/carbpavemt.png">{carbpavemt_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/carbrework.png">{carbrework_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/carbsoft.png">{carbsoft_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/Chorizon.png">{Chorizon_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/claylens.png">{claylens_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/cobble.png">{cobble_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/ggC.png">{ggC_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/gglag.png">{gglag_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/greenclay.png">{greenclay_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/indet.png">{indet}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/otherclay.png">{otherclay_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/othersand.png">{othersand_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/redsand.png">{redsand_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/redsoil.png">{redsoil_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/sandlens.png">{sandlens_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/sandyclay.png">{sandyclay_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/whitesand.png">{whitesand_}<description/></term>
       </lookup>
     </property>
     <property name="Vulnerability" type="enum">
       <description>How vulnerable is the feature?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5133" StandardCode="">{extreme}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5132" StandardCode="">{high_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5130" StandardCode="">{low_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5131" StandardCode="">{moderate_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/extreme.png">{extreme}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/high.png">{high_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/low.png">{low_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/moderate.png">{moderate_}<description/></term>
       </lookup>
     </property>
     <property name="Palaeotop setting" type="enum">
       <description>Select from the list what the feature palaeotopographic setting is.</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5136" StandardCode="">{backdune_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5137" StandardCode="">{beach_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth.jpg" HeuristID="0-5139" StandardCode="">{crest_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5135" StandardCode="">{foredune_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5142" StandardCode="">{indet}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5138" StandardCode="">{lakebed_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5141" StandardCode="">{other_}<description/></term>
-        <term pictureURL="files/data/gallery/kitten.jpg" HeuristID="0-5140" StandardCode="">{spit_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/backdune.png">{backdune_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/beach.png">{beach_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/crest.png">{crest_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/foredune.png">{foredune_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/indet.png">{indet}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/lakebed.png">{lakebed_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/other.png">{other_}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/spit.png">{spit_}<description/></term>
     </lookup>
     </property>
     <property name="Types of Photographs taken" type="enum">
