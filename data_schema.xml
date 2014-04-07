@@ -16,24 +16,11 @@
     <property name="Associated material" type="enum" isIdentifier="true">
       <description>Please describe associated material within the area of the hearth material</description>
       <lookup>
-        <term HeuristID="0-5166" StandardCode="">{all_}<description/></term>
-        <term HeuristID="0-5155" StandardCode="">{artefacts_}<description/></term>
-        <term HeuristID="0-5160" StandardCode="">{boneandart_}<description/></term>
-        <term HeuristID="0-5159" StandardCode="">{boneandegg_}<description/></term>
-        <term HeuristID="0-5165" StandardCode="">{boneggart_}<description/></term>
-        <term HeuristID="0-5153" StandardCode="">{boneindet_}<description/></term>
-        <term HeuristID="0-5161" StandardCode="">{eggandart_}<description/></term>
-        <term HeuristID="0-5154" StandardCode="">{eggshell_}<description/></term>
-        <term HeuristID="0-5158" StandardCode="">{lacandart_}<description/></term>
-        <term HeuristID="0-5156" StandardCode="">{lacandbone_}<description/></term>
-        <term HeuristID="0-5157" StandardCode="">{lacandegg_}<description/></term>
-        <term HeuristID="0-5163" StandardCode="">{lacbonart_}<description/></term>
-        <term HeuristID="0-5162" StandardCode="">{lacbonegg_}<description/></term>
-        <term HeuristID="0-5164" StandardCode="">{laceggart_}<description/></term>
-        <term HeuristID="0-5151" StandardCode="">{lacust_}<description/></term>
-        <term HeuristID="0-5150" StandardCode="">None<description/></term>
-        <term HeuristID="0-5167" StandardCode="">{otherwork}<description/></term>
-        <term HeuristID="0-5152" StandardCode="">{terrbone_}<description/></term>
+        <term HeuristID="0-5155" StandardCode="">Artefact<description/></term>
+        <term HeuristID="0-5154" StandardCode="">Egg shell<description/></term>
+        <term HeuristID="0-5151" StandardCode="">Lacustrine<description/></term>
+        <term HeuristID="0-5167" StandardCode="">Other<description/></term>
+        <term HeuristID="0-5152" StandardCode="">Terrestrial Bone<description/></term>
       </lookup>
     </property>
     <property name="Lacustrine Material" type="enum">
@@ -97,37 +84,19 @@
     <property name="Associated artefacts" type="enum">
       <description>Associated artefacts</description>
       <lookup>
-        <term>None<description/></term>
         <term HeuristID="0-5199" StandardCode="">{cs_}<description/></term>
-        <term HeuristID="0-5203" StandardCode="">{csgs_}<description/></term>
-        <term HeuristID="0-5202" StandardCode="">{csum_}<description/></term>
-        <term HeuristID="0-5204" StandardCode="">{csumgs_}<description/></term>
         <term HeuristID="0-5201" StandardCode="">{ground_}<description/></term>
         <term HeuristID="0-5200" StandardCode="">{um_}<description/></term>
-        <term HeuristID="0-5205" StandardCode="">{umgs}<description/></term>
       </lookup>
     </property>
     <property name="CS types" type="enum">
       <description>CS types?</description>
       <lookup>
         <term HeuristID="0-5208" StandardCode="">{co_}<description/></term>
-        <term HeuristID="0-5216" StandardCode="">{codeb_}<description/></term>
-        <term HeuristID="0-5224" StandardCode="">{codebindet_}<description/></term>
-        <term HeuristID="0-5217" StandardCode="">{cohammer_}<description/></term>
-        <term HeuristID="0-5218" StandardCode="">{coindet_}<description/></term>
         <term HeuristID="0-5209" StandardCode="">{deb_}<description/></term>
-        <term HeuristID="0-5219" StandardCode="">{debhammer_}<description/></term>
-        <term HeuristID="0-5220" StandardCode="">{debindet_}<description/></term>
         <term HeuristID="0-5210" StandardCode="">{hammer_}<description/></term>
         <term HeuristID="0-5211" StandardCode="">{indet_}<description/></term>
         <term HeuristID="0-5207" StandardCode="">{ru_}<description/></term>
-        <term HeuristID="0-5212" StandardCode="">{ruco_}<description/></term>
-        <term HeuristID="0-5221" StandardCode="">{rucodeb_}<description/></term>
-        <term HeuristID="0-5222" StandardCode="">{rucoindet_}<description/></term>
-        <term HeuristID="0-5213" StandardCode="">{rudeb_}<description/></term>
-        <term HeuristID="0-5223" StandardCode="">{rudebindet_}<description/></term>
-        <term HeuristID="0-5214" StandardCode="">{ruhammer_}<description/></term>
-        <term HeuristID="0-5215" StandardCode="">{ruindet_}<description/></term>
       </lookup>
     </property>
     <property name="RU types" type="enum">

@@ -75,6 +75,7 @@
           <HearthAssociated>
             <AssociatedMaterial>
               <AssociatedMaterial/>
+              <ShowTabs/>
               <Update/>
               <UpdateAndClose/>
               <Delete/>
@@ -109,12 +110,14 @@
             <Artefact>
               <AssociatedArtefacts/>
               <ArtefactRawMaterial/>
+              <ShowTabs/>
               <Update/>
               <UpdateAndClose/>
               <Delete/>
             </Artefact>
             <ChippedStone>
               <CSTypes/>
+              <ShowTabs/>
               <Update/>
               <UpdateAndClose/>
               <Delete/>
@@ -336,13 +339,16 @@
       <label>Associated Materials</label>
       <group ref="AssociatedMaterial">
         <label>Associated Material</label>
-        <select1 ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
+        <select ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Associated_material?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
+        <trigger ref="ShowTabs">
+          <label>Fill in Associated Material details</label>
+        </trigger>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>
@@ -452,13 +458,13 @@
       </group>
       <group ref="Artefact" faims_hidden="true">
         <label>Artefact</label>
-        <select1 ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
+        <select ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>Stone Artefact</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Artefact_raw_material?}</label>
           <item>
@@ -466,6 +472,9 @@
             <value>placeholder</value>
           </item>
         </select1>
+        <trigger ref="ShowTabs">
+          <label>Fill in Artefact details</label>
+        </trigger>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>
@@ -478,13 +487,16 @@
       </group>
       <group ref="ChippedStone" faims_hidden="true">
         <label>Chipped Stone</label>
-        <select1 ref="CSTypes" faims_attribute_name="CS types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
+        <select ref="CSTypes" faims_attribute_name="CS types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{CS_types?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
+        <trigger ref="ShowTabs">
+          <label>Fill in Chipped Stone details</label>
+        </trigger>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>
