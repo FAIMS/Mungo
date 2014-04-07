@@ -158,6 +158,8 @@ loadHearthAttributes() {
 }
 
 /** RelnEnt: Associated Hearths **/
+onEvent("HearthAssociated", "show", "updateTabs()");
+
 onEvent("HearthAssociated/AssociatedMaterial/Update", "delayclick", "saveHearthAssociated()");
 onEvent("HearthAssociated/Lacustrine/Update", "delayclick", "saveHearthAssociated()");
 onEvent("HearthAssociated/Eggshell/Update", "delayclick", "saveHearthAssociated()");
@@ -253,7 +255,7 @@ reallyDeleteHearthAssociated(){
 loadHearthAssociatedAttributes(){
     populateDropDown("HearthAssociated/AssociatedMaterial/AssociatedMaterial", makeVocab("Associated material"));
     populatePictureGallery("HearthAssociated/Lacustrine/LacustrineMaterial", makePictureGallery("Lacustrine Material"));
-    populateRadioGroup("HearthAssociated/Lacustrine/BurntLacustrineMaterial", makeVocab("Burnt Lacustrine material"));
+    populateRadioGroup("HearthAssociated/Lacustrine/BurntLacustrineMaterial", makeVocab("Burnt lacustrine material"));
     populatePictureGallery("HearthAssociated/Eggshell/AssociatedEggshell", makePictureGallery("Associated eggshell"));
     populateRadioGroup("HearthAssociated/Eggshell/BurntEggshell", makeVocab("Burnt eggshell"));
     populatePictureGallery("HearthAssociated/TerrestrialBone/AssociatedTerrestrialBone", makePictureGallery("Associated terrestrial bone"));
@@ -272,6 +274,7 @@ showHearthMaterialType() {
     Object name = fetchOne("select vocabName from vocabulary where vocabid = '"+getFieldValue("HearthAssociated/AssociatedMaterial/AssociatedMaterial")+"';");
     if (!isNull(name)){
         String vocab = name.get(0);
+        print(vocab);
         if(vocab.equals("{lacust_}")) {
             showTab("HearthAssociated/Lacustrine");
         } else if(vocab.equals("{terrbone_}")) {
@@ -280,43 +283,43 @@ showHearthMaterialType() {
             showTab("HearthAssociated/Eggshell");
         } else if(vocab.equals("{artefacts_}")) {
             showTab("HearthAssociated/Artefact");
-        } else if(vocab.equals("{lac&bone_}")) {
-            showTab("HearthAssociated/Lacustrine");
+        } else if(vocab.equals("{lacandbone_}")) {
             showTab("HearthAssociated/TerrestrialBone");
-        } else if(vocab.equals("{lac&egg_}")) {
+            showTab("HearthAssociated/Lacustrine");
+        } else if(vocab.equals("{lacandegg_}")) {
             showTab("HearthAssociated/Eggshell");
             showTab("HearthAssociated/Lacustrine");
-        } else if(vocab.equals("{lac&art_}")) {
+        } else if(vocab.equals("{lacandart_}")) {
+            showTab("HearthAssociated/Artefact");
             showTab("HearthAssociated/Lacustrine");
-            showTab("HearthAssociated/Artefact");
-        } else if(vocab.equals("{bone&egg_}")) {
-            showTab("HearthAssociated/Eggshell");
+        } else if(vocab.equals("{boneandegg_}")) {
             showTab("HearthAssociated/TerrestrialBone");
-        } else if(vocab.equals("{bone&art_}")) {
-            showTab("HearthAssociated/TerrestrialBone");
-            showTab("HearthAssociated/Artefact");
-        } else if(vocab.equals("{egg&art_}")) {
             showTab("HearthAssociated/Eggshell");
+        } else if(vocab.equals("{boneandart_}")) {
             showTab("HearthAssociated/Artefact");
+            showTab("HearthAssociated/TerrestrialBone");
+        } else if(vocab.equals("{eggandart_}")) {
+            showTab("HearthAssociated/Artefact");
+            showTab("HearthAssociated/Eggshell");
         } else if(vocab.equals("{lacbonegg_}")) {
-            showTab("HearthAssociated/Lacustrine");
             showTab("HearthAssociated/TerrestrialBone");
             showTab("HearthAssociated/Eggshell");
+            showTab("HearthAssociated/Lacustrine");
         } else if(vocab.equals("{lacbonart_}")) {
             showTab("HearthAssociated/Lacustrine");
         } else if(vocab.equals("{laceggart_}")) {
-            showTab("HearthAssociated/Lacustrine");
             showTab("HearthAssociated/Eggshell");
             showTab("HearthAssociated/Artefact");
+            showTab("HearthAssociated/Lacustrine");
         } else if(vocab.equals("{boneggart_}")) {
             showTab("HearthAssociated/TerrestrialBone");
-            showTab("HearthAssociated/Eggshell");
             showTab("HearthAssociated/Artefact");
+            showTab("HearthAssociated/Eggshell");
         } else if(vocab.equals("{all_}")) {
-            showTab("HearthAssociated/Lacustrine");
             showTab("HearthAssociated/TerrestrialBone");
             showTab("HearthAssociated/Eggshell");
             showTab("HearthAssociated/Artefact");
+            showTab("HearthAssociated/Lacustrine");
         } else if(vocab.equals("{otherwork}")) {
             showTab("HearthAssociated/OtherWork");
         }
@@ -336,13 +339,13 @@ showHearthArtefactType() {
         } else if(vocab.equals("{csum_}")) {
             showTab("HearthAssociated/ChippedStone");
         } else if(vocab.equals("{csgs_}")) {
-            showTab("HearthAssociated/ChippedStone");
             showTab("HearthAssociated/GroundMaterial");
-        } else if(vocab.equals("{csumgs_}")) {
             showTab("HearthAssociated/ChippedStone");
+        } else if(vocab.equals("{csumgs_}")) {
             showTab("HearthAssociated/GroundMaterial");
             showTab("HearthAssociated/UnmodifiedStone");
-        } else if(vocab.equals("{umgs_}")) {
+            showTab("HearthAssociated/ChippedStone");
+        } else if(vocab.equals("{umgs}")) {
             showTab("HearthAssociated/UnmodifiedStone");
             showTab("HearthAssociated/GroundMaterial");
         }
@@ -357,13 +360,38 @@ showHearthChippedStoneType() {
         || vocab.equals("{ruco_}")
         || vocab.equals("{rudeb_}")
         || vocab.equals("{ruhammer_}") 
-        || vocab.equals("{ruident_}") 
+        || vocab.equals("{ruindet_}") 
         || vocab.equals("{rucodeb_}") 
-        || vocab.equals("{rucoident_}") 
-        || vocab.equals("{rudebident_}")) {
+        || vocab.equals("{rucoindet_}") 
+        || vocab.equals("{rudebindet_}")) {
             showTab("HearthAssociated/RetouchedStone");
         }
     }
+}
+
+updateTabs() {
+    showTab("HearthAssociated/Lacustrine");
+    showTab("HearthAssociated/Eggshell");
+    showTab("HearthAssociated/TerrestrialBone");
+    showTab("HearthAssociated/OtherWork");
+    showTab("HearthAssociated/Artefact");
+    showTab("HearthAssociated/ChippedStone");
+    showTab("HearthAssociated/RetouchedStone");
+    showTab("HearthAssociated/GroundMaterial");
+    showTab("HearthAssociated/UnmodifiedStone");
+    cancelTab("HearthAssociated/Lacustrine", false);
+    cancelTab("HearthAssociated/Eggshell", false);
+    cancelTab("HearthAssociated/TerrestrialBone", false);
+    cancelTab("HearthAssociated/OtherWork", false);
+    cancelTab("HearthAssociated/Artefact", false);
+    cancelTab("HearthAssociated/ChippedStone", false);
+    cancelTab("HearthAssociated/RetouchedStone", false);
+    cancelTab("HearthAssociated/GroundMaterial", false);
+    cancelTab("HearthAssociated/UnmodifiedStone", false);
+    showHearthArtefactType();
+    showHearthMaterialType();
+    showHearthChippedStoneType();
+    showTab("HearthAssociated/AssociatedMaterial");
 }
 
 // MISC FUNCTIONS    

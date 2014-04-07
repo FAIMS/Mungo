@@ -277,42 +277,42 @@
       </group>
       <group ref="Topography">
         <label>Topography</label>
-        <select1 ref="TopoSetting" faims_attribute_name="Topo setting" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="TopoSetting" faims_attribute_name="Topo setting" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Topo_setting?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="Sediments" faims_attribute_name="Sediments" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="Sediments" faims_attribute_name="Sediments" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Sediments?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="Vulnerability" faims_attribute_name="Vulnerability" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="Vulnerability" faims_attribute_name="Vulnerability" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Vulnerability?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="PalaeotopSetting" faims_attribute_name="Palaeotop setting" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="PalaeotopSetting" faims_attribute_name="Palaeotop setting" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Palaeotop_setting?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="TypesOfPhotographsTaken" faims_attribute_name="Types of Photographs taken" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="TypesOfPhotographsTaken" faims_attribute_name="Types of Photographs taken" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Types_of_Photographs_taken}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select ref="Photos" faims_attribute_name="Photos" faims_certainty="true" faims_attribute_type="freetext" faims_sync="true" type="camera" faims_annotation="false">
+        <select ref="Photos" faims_attribute_name="Photos" faims_certainty="false" faims_attribute_type="vocab" faims_sync="true" type="camera" faims_annotation="true">
           <label>Photos</label>
           <item>
             <label>placeholder</label>
@@ -336,7 +336,7 @@
       <label>Associated Materials</label>
       <group ref="AssociatedMaterial">
         <label>Associated Material</label>
-        <select1 ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="AssociatedMaterial" faims_attribute_name="Associated material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Associated_material?}</label>
           <item>
             <label>placeholder</label>
@@ -355,14 +355,14 @@
       </group>
       <group ref="Lacustrine" faims_hidden="true">
         <label>Lacustrine</label>
-        <select1 ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Lacustrine_Material}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="BurntLacustrineMaterial" faims_attribute_name="Burnt lacustrine material" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="BurntLacustrineMaterial" faims_attribute_name="Burnt lacustrine material" faims_certainty="true" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Burnt_lacustrine_material?}</label>
           <item>
             <label>placeholder</label>
@@ -381,14 +381,14 @@
       </group>
       <group ref="Eggshell" faims_hidden="true">
         <label>Eggshell</label>
-        <select1 ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Associated_eggshell?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="BurntEggshell" faims_attribute_name="Burnt eggshell" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="BurntEggshell" faims_attribute_name="Burnt eggshell" faims_certainty="true" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Burnt_eggshell?}</label>
           <item>
             <label>placeholder</label>
@@ -407,14 +407,14 @@
       </group>
       <group ref="TerrestrialBone" faims_hidden="true">
         <label>Terrestrial Bone</label>
-        <select1 ref="AssociatedTerrestrialBone" faims_attribute_name="Associated terrestrial bone" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="AssociatedTerrestrialBone" faims_attribute_name="Associated terrestrial bone" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Associated_terrestrial_bone}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="BurntBone" faims_attribute_name="Burnt bone" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false" faims_hidden="true">
+        <select1 appearance="full" ref="BurntBone" faims_attribute_name="Burnt bone" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Burnt_bone}</label>
           <item>
             <label>placeholder</label>
@@ -433,7 +433,7 @@
       </group>
       <group ref="OtherWork" faims_hidden="true">
         <label>Other Work</label>
-        <select1 ref="OtherWorkedMaterial" faims_attribute_name="Other worked material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="OtherWorkedMaterial" faims_attribute_name="Other worked material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Other_worked_material?}</label>
           <item>
             <label>placeholder</label>
@@ -452,14 +452,14 @@
       </group>
       <group ref="Artefact" faims_hidden="true">
         <label>Artefact</label>
-        <select1 ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="AssociatedArtefacts" faims_attribute_name="Associated artefacts" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>Stone Artefact</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Artefact_raw_material?}</label>
           <item>
             <label>placeholder</label>
@@ -478,7 +478,7 @@
       </group>
       <group ref="ChippedStone" faims_hidden="true">
         <label>Chipped Stone</label>
-        <select1 ref="CSTypes" faims_attribute_name="CS types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="CSTypes" faims_attribute_name="CS types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{CS_types?}</label>
           <item>
             <label>placeholder</label>
@@ -497,7 +497,7 @@
       </group>
       <group ref="RetouchedStone" faims_hidden="true">
         <label>Retouched Stone</label>
-        <select1 ref="RUTypes" faims_attribute_name="RU types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="RUTypes" faims_attribute_name="RU types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{RU_types?}</label>
           <item>
             <label>placeholder</label>
@@ -516,14 +516,14 @@
       </group>
       <group ref="GroundMaterial" faims_hidden="true">
         <label>Ground Material</label>
-        <select1 ref="GroundMaterial" faims_attribute_name="Ground material" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="GroundMaterial" faims_attribute_name="Ground material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Ground_material?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="GroundMaterialStatus" faims_attribute_name="Ground material status" faims_certainty="false" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
+        <select1 ref="GroundMaterialStatus" faims_attribute_name="Ground material status" faims_certainty="true" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Ground_material_status?}</label>
           <item>
             <label>placeholder</label>
@@ -542,7 +542,7 @@
       </group>
       <group ref="UnmodifiedStone" faims_hidden="true">
         <label>Unmodified Stone</label>
-        <select1 ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
           <label>{Unmod_types?}</label>
           <item>
             <label>placeholder</label>
