@@ -277,6 +277,22 @@
             <value>placeholder</value>
           </item>
         </select1>
+        <!--We would like to see Dropdown-->
+        <select1 ref="ModificationOfHeatRetainerHearths" faims_attribute_name="Modification of heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+          <label>{Modification_of_heat_retainer_hearths?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
+        <!--We would like to see Dropdown-->
+        <select1 ref="ModificationOfNonHeatRetainerHearths" faims_attribute_name="Modification of non heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+          <label>{Modification_of_non_heat_retainer_hearths?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select1>
       </group>
       <group ref="Topography">
         <label>Topography</label>
@@ -361,13 +377,13 @@
       </group>
       <group ref="Lacustrine" faims_hidden="true">
         <label>Lacustrine</label>
-        <select1 ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select ref="LacustrineMaterial" faims_attribute_name="Lacustrine Material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Lacustrine_Material}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <select1 ref="BurntLacustrineMaterial" faims_attribute_name="Burnt lacustrine material" faims_certainty="true" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Burnt_lacustrine_material?}</label>
           <item>
@@ -387,13 +403,13 @@
       </group>
       <group ref="Eggshell" faims_hidden="true">
         <label>Eggshell</label>
-        <select1 ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select ref="AssociatedEggshell" faims_attribute_name="Associated eggshell" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Associated_eggshell?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <select1 ref="BurntEggshell" faims_attribute_name="Burnt eggshell" faims_certainty="true" appearance="full" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Burnt_eggshell?}</label>
           <item>
@@ -465,13 +481,13 @@
             <value>placeholder</value>
           </item>
         </select>
-        <select1 ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select ref="ArtefactRawMaterial" faims_attribute_name="Artefact raw material" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Artefact_raw_material?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <trigger ref="ShowTabs">
           <label>Fill in Artefact details</label>
         </trigger>
@@ -509,13 +525,13 @@
       </group>
       <group ref="RetouchedStone" faims_hidden="true">
         <label>Retouched Stone</label>
-        <select1 ref="RUTypes" faims_attribute_name="RU types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select ref="RUTypes" faims_attribute_name="RU types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{RU_types?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>
@@ -554,13 +570,13 @@
       </group>
       <group ref="UnmodifiedStone" faims_hidden="true">
         <label>Unmodified Stone</label>
-        <select1 ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select ref="UnmodTypes" faims_attribute_name="Unmod types" faims_certainty="true" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Unmod_types?}</label>
           <item>
             <label>placeholder</label>
             <value>placeholder</value>
           </item>
-        </select1>
+        </select>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>

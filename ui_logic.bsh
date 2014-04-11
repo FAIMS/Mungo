@@ -145,11 +145,14 @@ loadHearthAttributes() {
     populateHierarchicalPictureGallery("Hearth/Admin/HearthType", "Hearth Type");
     populatePictureGallery("Hearth/Admin/Charcoal", makePictureGallery("Charcoal"));
     populatePictureGallery("Hearth/Admin/DegreeInSitu", makePictureGallery("Degree in situ"));
+    populatePictureGallery("Hearth/Admin/ModificationOfHeatRetainerHearths", makePictureGallery("Modification of heat retainer hearths?"));
+    populatePictureGallery("Hearth/Admin/ModificationOfNonHeatRetainerHearths", makePictureGallery("Modification of non heat retainer hearths?"));
     populatePictureGallery("Hearth/Topography/TopoSetting", makePictureGallery("Topo setting"));
     populatePictureGallery("Hearth/Topography/Sediments", makePictureGallery("Sediments"));
     populatePictureGallery("Hearth/Topography/Vulnerability", makePictureGallery("Vulnerability"));
     populatePictureGallery("Hearth/Topography/PalaeotopSetting", makePictureGallery("Palaeotop setting"));
     populateDropDown("Hearth/Topography/TypesOfPhotographsTaken", makeVocab("Types of Photographs taken"));
+
 }
 
 /** RelnEnt: Associated Hearths **/
@@ -249,20 +252,20 @@ reallyDeleteHearthAssociated(){
 
 loadHearthAssociatedAttributes(){
     populateCheckBoxGroup("HearthAssociated/AssociatedMaterial/AssociatedMaterial", makeVocab("Associated material"));
-    populatePictureGallery("HearthAssociated/Lacustrine/LacustrineMaterial", makePictureGallery("Lacustrine Material"));
+    populateCheckBoxGroup("HearthAssociated/Lacustrine/LacustrineMaterial", makeVocab("Lacustrine Material"));
     populateRadioGroup("HearthAssociated/Lacustrine/BurntLacustrineMaterial", makeVocab("Burnt lacustrine material"));
-    populatePictureGallery("HearthAssociated/Eggshell/AssociatedEggshell", makePictureGallery("Associated eggshell"));
+    populateCheckBoxGroup("HearthAssociated/Eggshell/AssociatedEggshell", makeVocab("Associated eggshell"));
     populateRadioGroup("HearthAssociated/Eggshell/BurntEggshell", makeVocab("Burnt eggshell"));
     populatePictureGallery("HearthAssociated/TerrestrialBone/AssociatedTerrestrialBone", makePictureGallery("Associated terrestrial bone"));
     populateRadioGroup("HearthAssociated/TerrestrialBone/BurntBone", makeVocab("Burnt bone"));
     populatePictureGallery("HearthAssociated/OtherWork/OtherWorkedMaterial", makePictureGallery("Other worked material"));
     populateCheckBoxGroup("HearthAssociated/Artefact/AssociatedArtefacts", makeVocab("Associated artefacts"));
-    populatePictureGallery("HearthAssociated/Artefact/ArtefactRawMaterial", makePictureGallery("Artefact raw material"));
+    populateCheckBoxGroup("HearthAssociated/Artefact/ArtefactRawMaterial", makeVocab("Artefact raw material"));
     populateCheckBoxGroup("HearthAssociated/ChippedStone/CSTypes", makeVocab("CS types"));
-    populatePictureGallery("HearthAssociated/RetouchedStone/RUTypes", makePictureGallery("RU types"));
+    populateCheckBoxGroup("HearthAssociated/RetouchedStone/RUTypes", makeVocab("RU types"));
     populatePictureGallery("HearthAssociated/GroundMaterial/GroundMaterial", makePictureGallery("Ground material"));
     populateRadioGroup("HearthAssociated/GroundMaterial/GroundMaterialStatus", makeVocab("Ground material status"));
-    populatePictureGallery("HearthAssociated/UnmodifiedStone/UnmodTypes", makePictureGallery("Unmod types"));
+    populateCheckBoxGroup("HearthAssociated/UnmodifiedStone/UnmodTypes", makeVocab("Unmod types"));
 }
 
 showHearthMaterialType(trigger) {
