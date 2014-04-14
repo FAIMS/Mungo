@@ -145,11 +145,11 @@ loadHearthAttributes() {
     populateHierarchicalPictureGallery("Hearth/Admin/HearthType", "Hearth Type");
     populatePictureGallery("Hearth/Admin/Charcoal", makePictureGallery("Charcoal"));
     populatePictureGallery("Hearth/Admin/DegreeInSitu", makePictureGallery("Degree in situ"));
-    populatePictureGallery("Hearth/Admin/ModificationOfHeatRetainerHearths", makePictureGallery("Modification of heat retainer hearths?"));
-    populatePictureGallery("Hearth/Admin/ModificationOfNonHeatRetainerHearths", makePictureGallery("Modification of non heat retainer hearths?"));
-    populatePictureGallery("Hearth/Topography/TopoSetting", makePictureGallery("Topo setting"));
+    populateCheckBoxGroup("Hearth/Admin/ModificationOfHeatRetainerHearths", makeVocab("Modification of heat retainer hearths?"));
+    populateCheckBoxGroup("Hearth/Admin/ModificationOfNonHeatRetainerHearths", makeVocab("Modification of non heat retainer hearths?"));
+    populateDropDown("Hearth/Topography/TopoSetting", makeVocab("Topo setting"));
     populatePictureGallery("Hearth/Topography/Sediments", makePictureGallery("Sediments"));
-    populatePictureGallery("Hearth/Topography/Vulnerability", makePictureGallery("Vulnerability"));
+    populateDropDown("Hearth/Topography/Vulnerability", makeVocab("Vulnerability"));
     populatePictureGallery("Hearth/Topography/PalaeotopSetting", makePictureGallery("Palaeotop setting"));
     populateDropDown("Hearth/Topography/TypesOfPhotographsTaken", makeVocab("Types of Photographs taken"));
 

@@ -48,7 +48,7 @@
         <term pictureURL="files/data/gallery/hearth/bone/other.png">{other_}<description/></term>
         <term pictureURL="files/data/gallery/hearth/bone/reptile.png">{reptile_}<description/></term>
         <term pictureURL="files/data/gallery/hearth/bone/undiag.png">{undiag}<description>Fragment is undiagnostic</description></term>
-        <term pictureURL="files/data/gallery/hearth/bone/unident.png">{unident_}<description>Cannot be identified by recorder</term>
+        <term pictureURL="files/data/gallery/hearth/bone/unident.png">{unident_}<description>Cannot be identified by recorder</description></term>
       </lookup>
     </property>
     <property name="Burnt bone" type="enum">
@@ -78,7 +78,7 @@
       <description>If stone artefacts are present in the hearth, select those of the following that have been observed</description>
       <lookup>
         <term HeuristID="0-5199" StandardCode="">{cs_}<description>Chipped stone</description></term>
-        <term HeuristID="0-5201" StandardCode="">{ground_}<description>Ground stone</term>
+        <term HeuristID="0-5201" StandardCode="">{ground_}<description>Ground stone</description></term>
         <term HeuristID="0-5200" StandardCode="">{um_}<description>Unmodified stone</description></term>
       </lookup>
     </property>
@@ -107,9 +107,9 @@
       <description>If unmodified stone is present in the hearth, select those of the following that have been observed</description>
       <lookup>
         <term>{indet}<description>Indeterminate unmodified stone</description></term>
-        <term pictureURL="files/data/gallery/hearth/unmod/nodule.png">{nodule_}<description>Nodular or rounded cobble</term>
-        <term pictureURL="files/data/gallery/hearth/unmod/pebble.png">{pebble_}<description>Small nodular or rounded piece, unlikely to be useful for artefact manufacture</term>
-        <term pictureURL="files/data/gallery/hearth/unmod/slab.png">{slab_}<description>Angular piece</term>
+        <term pictureURL="files/data/gallery/hearth/unmod/nodule.png">{nodule_}<description>Nodular or rounded cobble</description></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/pebble.png">{pebble_}<description>Small nodular or rounded piece, unlikely to be useful for artefact manufacture</description></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/slab.png">{slab_}<description>Angular piece</description></term>
       </lookup>
     </property>
     <property name="Ground material" type="enum">
@@ -168,12 +168,12 @@
     <property name="Hearth Type" type="enum">
       <description>Type of hearth</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/hearth/Heat_retainer.png">{Heat_retainer}<description>Hearths with heat-retainer hearthstones</description>
-            <term pictureURL="files/data/gallery/hearth/hearth/hscarb.png">{hscarb}<description>Carbonate hearthstones</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearth/hsclay.png">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearth/hsindet.png">{hsindet}<description>Hearthstones of indeterminate material</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearth/hsother.png">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearth/hsterm.png">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
+        <term pictureURL="files/data/gallery/hearth/hearthHeat/Heat_retainer.png">{Heat_retainer}<description>Hearths with heat-retainer hearthstones</description>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hscarb.png">{hscarb}<description>Carbonate hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsclay.png">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsindet.png">{hsindet}<description>Hearthstones of indeterminate material</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsother.png">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsterm.png">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
         </term>
         <term pictureURL="files/data/gallery/hearth/hearthNonHeat/Non-heat_retainer.png">{Non-heat_retainer}<description>Hearths without hearthstones</description>
             <term pictureURL="files/data/gallery/hearth/hearthNonHeat/ashlens.png">{ashlens}<description/></term>
@@ -205,21 +205,17 @@
       <lookup>
         <term pictureURL="files/data/gallery/hearth/degree/ambig.png">{ambig_}<description>The hearth material appears to be in situ, but it is impossible to say whether it is actually recemented</description></term>
         <term pictureURL="files/data/gallery/hearth/degree/most.png">{most_}<description>Most of the visible hearth material is in situ</description></term>
-        <term pictureURL="files/data/gallery/hearth/degree/recement.png">{recement_}<description>The hearth material appears to be in situ, but there is a high likelihood that it is actually cemented in redeposited sediment</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/cement.png">{recement_}<description>The hearth material appears to be in situ, but there is a high likelihood that it is actually cemented in redeposited sediment</description></term>
         <term pictureURL="files/data/gallery/hearth/degree/some.png">{some}<description>At least some of the hearth is in situ</description></term>
         <term pictureURL="files/data/gallery/hearth/degree/surface.png">{surface}<description>No hearth material is embedded in sediment</description></term>
       </lookup>
     </property>
-    <!-- change this to checj box -->
+    <!-- change this to check box -->
     <property name="Modification of heat retainer hearths?" type="enum">
       <description>Have heat retainer hearths been modified?</description>
       <lookup>
         <term HeuristID="0-5075" StandardCode="">{dispers}<description>Material widely dispersed from in situ or clustered part of hearth</description></term>
-        <term HeuristID="0-5079" StandardCode="">{dispol}<description/></term>
         <term HeuristID="0-5074" StandardCode="">{frag}<description>Material highly fragmented</description></term>
-        <term HeuristID="0-5076" StandardCode="">{fragdisp}<description>Fragmented and dispersed material</description></term>
-        <term HeuristID="0-5080" StandardCode="">{fragdispol}<description/></term>
-        <term HeuristID="0-5078" StandardCode="">{fragpol}<description/></term>
         <term HeuristID="0-5073" StandardCode="">{none}<description>Hearth structure is largely maintained, hearthstones are in good conditions</description></term>
         <term HeuristID="0-5077" StandardCode="">{polish}<description>Hearthstones are smoothed and glossy material</description></term>
       </lookup>
@@ -229,44 +225,42 @@
       <lookup>
         <term HeuristID="0-5087" StandardCode="">{gul}<description>Feature is bisected by an established gully</description></term>
         <term HeuristID="0-5084" StandardCode="">{incrill}<description>Incipient rill network extending to edge of hearth or cutting back into it</description></term>
-        <term HeuristID="0-5082" StandardCode="">{none}<description>Hearth structure is intact and hearth material is largely unweathered</description></term>
         <term HeuristID="0-5085" StandardCode="">{rill}<description>Well-developed rills are cutting through the hearth</description></term>
         <term HeuristID="0-5086" StandardCode="">{undercut}<description>Underlying sediment has been removed through erosion</description></term>
         <term HeuristID="0-5083" StandardCode="">{weather}<description>Hearth material has started to weather and/or crumble, but the feature remains largely intact</description></term>
-      </lookup<name />
+      </lookup>
     </property>
     <property name="Topo setting" type="enum">
       <description>Where on the lunette exposure is the hearth located?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/_LT6degree.png">{_LT6degree_}<description>Slightly sloping surface</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/6-12deg.png">{6-12deg_}<description>Moderately sloping surface</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/GT12degree.png">{GT12degree_}<description>More steeply sloping surface</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/chanfloor.png">{chanfloor_}<description>In the floor of a modern outwash channel</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/chanwall_.png">{chanwall__}<description>In the wall of a modern outwash channel</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/deepgulfl.png">{deepgulfl_}<description>In the floor of a gully greater than 1.5m wide and deep</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/deepgulwal.png">{deepgulwal_}<description>In the wall of a gully greater than 1.5m wide and deep</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/platform.png">{platform}<description>Broad, flat platform exposure</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/residside.png">{residside_}<description>In the side of a residual</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/residtop.png">{residtop_}<description>Flat surface on top of a residual</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/ridge.png">{ridge_}<description>On a narrow ridge in heavily eroded area</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/ridgerill.png">{ridgerill_}<description>Feature in a heavily eroded area is cut by deep rills and straddles rill wall and rill flow</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/rillfloor.png">{rillfloor_}<description>In the floor of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/rillwall.png">{rillwall_}<description>In the wall of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/shalgulfl.png">{shalgulfl_}<description>In the floor of a gully less than 1.5m wide or deep</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/shalgulwal.png">{shalgulwal_}<description>In the wall of a gully less than 1.5m wide or deep</description></term>
-        <term pictureURL="files/data/gallery/hearth/topoSetting/shallrill.png">{shallrill_}<description>Within a shallow rill</description></term>
+        <term>{_LT6degree_}<description>Slightly sloping surface</description></term>
+        <term>{6-12deg_}<description>Moderately sloping surface</description></term>
+        <term>{GT12degree_}<description>More steeply sloping surface</description></term>
+        <term>{chanfloor_}<description>In the floor of a modern outwash channel</description></term>
+        <term>{chanwall__}<description>In the wall of a modern outwash channel</description></term>
+        <term>{deepgulfl_}<description>In the floor of a gully greater than 1.5m wide and deep</description></term>
+        <term>{deepgulwal_}<description>In the wall of a gully greater than 1.5m wide and deep</description></term>
+        <term>{platform}<description>Broad, flat platform exposure</description></term>
+        <term>{residside_}<description>In the side of a residual</description></term>
+        <term>{residtop_}<description>Flat surface on top of a residual</description></term>
+        <term>{ridge_}<description>On a narrow ridge in heavily eroded area</description></term>
+        <term>{ridgerill_}<description>Feature in a heavily eroded area is cut by deep rills and straddles rill wall and rill flow</description></term>
+        <term>{rillfloor_}<description>In the floor of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
+        <term>{rillwall_}<description>In the wall of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
+        <term>{shalgulfl_}<description>In the floor of a gully less than 1.5m wide or deep</description></term>
+        <term>{shalgulwal_}<description>In the wall of a gully less than 1.5m wide or deep</description></term>
+        <term>{shallrill_}<description>Within a shallow rill</description></term>
       </lookup>
     </property>
     <property name="Sediments" type="enum">
       <description>What is the surrounding sediment?</description>
       <lookup>
         <term pictureURL="files/data/gallery/hearth/sediments/alternat.png">{alternat_}<description>Alternating layers of sand and clay</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/bedsandyclay.png">{bedsandyclay_}<description/></term>
         <term pictureURL="files/data/gallery/hearth/sediments/brownsand.png">{brownsand_}<description>Sandy sediments of a brownish colour</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/brownsoil.png">{brownsoil_}<description>Soil of a brownish colour</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/carblag.png">{carblag_}<description>Any other surface lag of hard carbonate nodules</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/carbpavemt.png">{carbpavemt_}<description>Well developed in situ soil carbonate forming a pavement</description></term>
-        <term pictureURL="files/data/gallery/hearth/carbrework.png">{carbrework_}<description>A carbonate lag that has been reworked and reburied</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/carbrework.png">{carbrework_}<description>A carbonate lag that has been reworked and reburied</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/carbsoft.png">{carbsoft_}<description>In situ soil carbonate in a diffuse horizon</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/Chorizon.png">{Chorizon_}<description>In situ nodular soil carbonate in any other sediment</description></term>
         <term pictureURL="files/data/gallery/hearth/sediments/claylens.png">{claylens_}<description>Distinct clay lens within other sediments</description></term>
@@ -287,10 +281,10 @@
     <property name="Vulnerability" type="enum">
       <description>How vulnerable is the feature?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/vulnerability/extreme.png">{extreme}<description>Hearth material is in imminent danger of rapid removal and loss, e.g. edge of eroding residual or deep rill, in gully wall, on a steep slope- washed surface, or in loose sandy sediment</description></term>
-        <term pictureURL="files/data/gallery/hearth/vulnerability/high.png">{high_}<description>High probability of material being removed by erosion, or of the hearth losing its integrity, e.g. relatively steep slope with incipient rills and/or in loose sandy sediment</description></term>
-        <term pictureURL="files/data/gallery/hearth/vulnerability/low.png">{low_}<description>On a relatively stable, flat surface or gentle slope that is not being eroded by rills, in well cemented (firm) sediment</description></term>
-        <term pictureURL="files/data/gallery/hearth/vulnerability/moderate.png">{moderate_}<description>Wider area is being eaten away by ongoing erosion, e.g. near edge of platform exposure, gully head, expanding rill system</description></term>
+        <term>{extreme}<description>Hearth material is in imminent danger of rapid removal and loss, e.g. edge of eroding residual or deep rill, in gully wall, on a steep slope- washed surface, or in loose sandy sediment</description></term>
+        <term>{high_}<description>High probability of material being removed by erosion, or of the hearth losing its integrity, e.g. relatively steep slope with incipient rills and/or in loose sandy sediment</description></term>
+        <term>{low_}<description>On a relatively stable, flat surface or gentle slope that is not being eroded by rills, in well cemented (firm) sediment</description></term>
+        <term>{moderate_}<description>Wider area is being eaten away by ongoing erosion, e.g. near edge of platform exposure, gully head, expanding rill system</description></term>
       </lookup>
     </property>
     <property name="Palaeotop setting" type="enum">

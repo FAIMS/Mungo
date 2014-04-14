@@ -258,6 +258,20 @@
             <value>placeholder</value>
           </item>
         </select1>
+        <select ref="ModificationOfHeatRetainerHearths" faims_attribute_name="Modification of heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+          <label>{Modification_of_heat_retainer_hearths?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select>
+        <select ref="ModificationOfNonHeatRetainerHearths" faims_attribute_name="Modification of non heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
+          <label>{Modification_of_non_heat_retainer_hearths?}</label>
+          <item>
+            <label>placeholder</label>
+            <value>placeholder</value>
+          </item>
+        </select>
         <trigger ref="Update">
           <label>{Save_Record}</label>
         </trigger>
@@ -277,26 +291,10 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <!--We would like to see Dropdown-->
-        <select1 ref="ModificationOfHeatRetainerHearths" faims_attribute_name="Modification of heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Modification_of_heat_retainer_hearths?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
-        <!--We would like to see Dropdown-->
-        <select1 ref="ModificationOfNonHeatRetainerHearths" faims_attribute_name="Modification of non heat retainer hearths?" faims_certainty="false" faims_attribute_type="vocab" faims_read_only="false">
-          <label>{Modification_of_non_heat_retainer_hearths?}</label>
-          <item>
-            <label>placeholder</label>
-            <value>placeholder</value>
-          </item>
-        </select1>
       </group>
       <group ref="Topography">
         <label>Topography</label>
-        <select1 ref="TopoSetting" faims_attribute_name="Topo setting" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="TopoSetting" faims_attribute_name="Topo setting" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Topo_setting?}</label>
           <item>
             <label>placeholder</label>
@@ -310,7 +308,7 @@
             <value>placeholder</value>
           </item>
         </select1>
-        <select1 ref="Vulnerability" faims_attribute_name="Vulnerability" faims_attribute_type="vocab" faims_read_only="false" type="image">
+        <select1 ref="Vulnerability" faims_attribute_name="Vulnerability" faims_attribute_type="vocab" faims_read_only="false">
           <label>{Vulnerability?}</label>
           <item>
             <label>placeholder</label>
