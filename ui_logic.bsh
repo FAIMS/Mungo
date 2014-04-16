@@ -70,16 +70,29 @@ refreshFeatures(){
 }
 
 /** ArchEnt: HEARTH **/
+onEvent("Hearth/Admin/DescribeModification", "click", "showModification(true)");
 onEvent("Hearth/Admin/Update", "delayclick", "saveHearth()");
 onEvent("Hearth/Admin/Delete", "delayclick", "deleteHearth()");
 
+onEvent("Hearth/HeatModification/Update", "delayclick", "saveHearth()");
+onEvent("Hearth/HeatModification/Delete", "delayclick", "deleteHearth()");
+onEvent("Hearth/NonHeatModification/Update", "delayclick", "saveHearth()");
+onEvent("Hearth/NonHeatModification/Delete", "delayclick", "deleteHearth()");
+
 onEvent("Hearth/Associated_materials/addAssociated", "delayclick", "newHearthAssociated()");
 onEvent("Hearth/Associated_materials/AssociatedList", "click", "loadHearthAssociated()");
-onEvent("Hearth", "show", "refreshHearthAssociated()");
+onEvent("Hearth", "show", "refreshHearthAssociated(); showModification(false)");
+onEvent("Hearth/Photos", "show", "refreshAssociatedPhoto()");
 
-onEvent("Hearth/Topography/attachPhoto", "click", "attachPictureTo(\"Hearth/Topography/Photos\")");
+
 onEvent("Hearth/Topography/Update", "delayclick", "saveHearth()");
 onEvent("Hearth/Topography/Delete", "delayclick", "deleteHearth()");
+onEvent("Hearth/Photos/Update", "delayclick", "saveHearth()");
+onEvent("Hearth/Photos/Delete", "delayclick", "deleteHearth()");
+onEvent("Hearth/Photos/attachPhoto", "click", "attachPictureTo(\"Hearth/Topography/Photos\")");
+onEvent("Hearth/Photos/addPhotograph", "delayclick", "newAssociatedPhoto()");
+onEvent("Hearth/Photos/PhotographList", "click", "loadAssociatedPhoto()");
+
 
 String hearth_id = null;
 
@@ -95,7 +108,7 @@ loadHearth() {
 loadHearthFrom(entid) {
     hearth_id = entid;
     if (isNull(entid)) return;
-    showTabGroup("Hearth", entid);    
+    showTabGroup("Hearth", entid);
 }
 
 saveHearth() {
@@ -123,6 +136,51 @@ reallyDeleteHearth(){
     cancelTabGroup("Hearth", false);
 }
 
+showModification(trigger) {
+    showTab("Hearth/HeatModification");
+    showTab("Hearth/NonHeatModification");
+    cancelTab("Hearth/HeatModification", false);
+    cancelTab("Hearth/NonHeatModification", false);
+    Object obj1 = fetchOne("select vocabName from vocabulary where vocabid = '"+getFieldValue("Hearth/Admin/HearthType")+"';");
+    Object obj2 = fetchOne("select vocabName from vocabulary where vocabid = '"+getFieldValue("Hearth/Admin/HasModification")+"';");
+    if(obj1.size() > 0 && obj2.size() > 0) {
+        String hearth_type = obj1.get(0);
+        String has_modification = obj2.get(0);
+        if(has_modification.equals("{yes}")) {
+            if(hearth_type.equals("{ahsterm}")
+               || hearth_type.equals("{bhscarb}")
+               || hearth_type.equals("{chsclay}")
+               || hearth_type.equals("{dhsother}")
+               || hearth_type.equals("{ehsindet}")) {
+                showTab("Hearth/HeatModification");
+            } else if (hearth_type.equals("{aemupat}")
+               || hearth_type.equals("{bbaked_clay}")
+               || hearth_type.equals("{cbakedsed}")
+               || hearth_type.equals("{dashlens}")
+               || hearth_type.equals("{eashpatch}")
+               || hearth_type.equals("{fcharclens}")
+               || hearth_type.equals("{gstaining}")
+               || hearth_type.equals("{hother}")) {
+                showTab("Hearth/NonHeatModification");
+            } else {
+                showTab("Hearth/Admin");
+            }
+            if(!trigger) {
+                showTab("Hearth/Admin");
+            }
+        } else {
+            showTab("Hearth/Admin");
+            showToast("Please choose a specific Hearth Type");
+        }
+    } else {
+        showTab("Hearth/Admin");
+        if(trigger) {
+            showToast("Please specify that there has been modifications");    
+        }
+    }
+}
+
+
 refreshHearthAssociated() {
     if (!isNull(hearth_id)){
         associatedHearth = fetchAll("select relationshipid, group_concat(VocabName)" +
@@ -145,13 +203,14 @@ loadHearthAttributes() {
     populateHierarchicalPictureGallery("Hearth/Admin/HearthType", "Hearth Type");
     populatePictureGallery("Hearth/Admin/Charcoal", makePictureGallery("Charcoal"));
     populatePictureGallery("Hearth/Admin/DegreeInSitu", makePictureGallery("Degree in situ"));
-    populateCheckBoxGroup("Hearth/Admin/ModificationOfHeatRetainerHearths", makeVocab("Modification of heat retainer hearths?"));
-    populateCheckBoxGroup("Hearth/Admin/ModificationOfNonHeatRetainerHearths", makeVocab("Modification of non heat retainer hearths?"));
+    populateCheckBoxGroup("Hearth/Admin/HasModification", makeVocab("Has modification"));
+    populateCheckBoxGroup("Hearth/HeatModification/ModificationOfHeatRetainerHearths", makeVocab("Modification of heat retainer hearths?"));
+    populateCheckBoxGroup("Hearth/NonHeatModification/ModificationOfNonHeatRetainerHearths", makeVocab("Modification of non heat retainer hearths?"));
     populateDropDown("Hearth/Topography/TopoSetting", makeVocab("Topo setting"));
     populatePictureGallery("Hearth/Topography/Sediments", makePictureGallery("Sediments"));
     populateDropDown("Hearth/Topography/Vulnerability", makeVocab("Vulnerability"));
     populatePictureGallery("Hearth/Topography/PalaeotopSetting", makePictureGallery("Palaeotop setting"));
-    populateDropDown("Hearth/Topography/TypesOfPhotographsTaken", makeVocab("Types of Photographs taken"));
+    populateCheckBoxGroup("Hearth/Topography/TypesOfPhotographsTaken", makeVocab("Types of Photographs taken"));
 
 }
 
@@ -309,15 +368,15 @@ showHearthArtefactType(trigger) {
         fields.add(name.get(0));
     }
     show = false;
-    if(fields.contains("{ground_}")) {
+    if(fields.contains("{cground}")) {
         showTab("HearthAssociated/GroundMaterial");
         show = true;
     }
-    if(fields.contains("{um_}")) {
+    if(fields.contains("{bum}")) {
         showTab("HearthAssociated/UnmodifiedStone");
         show = true;
     }
-    if(fields.contains("{cs_}")) {
+    if(fields.contains("{acs}")) {
         showTab("HearthAssociated/ChippedStone");
         show = true;
     }
@@ -334,7 +393,7 @@ showHearthChippedStoneType(trigger) {
         fields.add(name.get(0));
     }
     show = false;
-    if(fields.contains("{ru_}")) {
+    if(fields.contains("{aru}")) {
         showTab("HearthAssociated/RetouchedStone");
         show = true;
     }
@@ -368,6 +427,78 @@ updateTabs() {
     showTab("HearthAssociated/AssociatedMaterial");
 }
 
+/** Related photographs **/
+
+String photo_associated_id = null;
+
+onEvent("AssociatedPhotos/AssociatedPhotos/Update", "delayclick", "saveAssociatedPhoto()");
+onEvent("AssociatedPhotos/AssociatedPhotos/SaveAndClose", "delayclick", "saveAndCloseAssociatedPhoto()");
+onEvent("AssociatedPhotos/AssociatedPhotos/SaveAndNew", "delayclick", "saveAssociatedPhoto();newAssociatedPhotoWithoutHearth();");
+
+
+newAssociatedPhoto(){
+    photo_associated_id = null;
+    newTabGroup("AssociatedPhotos");
+    saveHearth();
+}
+loadAssociatedPhoto() {
+    photo_associated_id = getListItemValue();
+    loadAssociatedPhotoFrom(photo_associated_id);
+}
+newAssociatedPhotoWithoutHearth(){
+    photo_associated_id = null;
+    newTabGroup("AssociatedPhotos");
+}
+
+loadAssociatedPhotoFrom(entid) {
+    photo_associated_id = entid;
+    if (isNull(entid)) return;
+    showTabGroup("AssociatedPhotos", entid);
+}
+
+refreshAssociatedPhoto() {
+    if (!isNull(hearth_id)){
+        associatedPhoto = fetchAll("select relationshipid, group_concat(freetext, ' ')" +
+            "from (select relationshipid, vocabname, freetext " +
+                "from latestnondeletedrelnidentifiers " +
+                "where relntypename = 'Photographs'" + 
+                "and relationshipid in (select relationshipid " +
+                                        "from latestnondeletedaentreln " +
+                                        "where uuid = " + hearth_id + ")" +
+               ")" +
+        "group by relationshipid;");
+        populateList("Hearth/Photos/PhotographList", associatedPhoto);
+    } else {
+        Object empty = fetchAll("select '', '';");
+        populateList("Hearth/Photos/PhotographList", empty);
+    }
+}
+
+saveAssociatedPhoto() {
+    if (isNull(getFieldValue("AssociatedPhotos/AssociatedPhotos/CameraPrefix")) || isNull(getFieldValue("AssociatedPhotos/AssociatedPhotos/PhotoNumber"))) { 
+        showWarning("Validation Error", "Please fill in both fields before saving.");
+        showTabGroup("AssociatedPhotos");
+        return;
+    }
+    if (!isNull(photo_associated_id)) {
+        entity = fetchRel(photo_associated_id);
+    }
+    saveTabGroup("AssociatedPhotos", photo_associated_id, null, null, "photo_associated_id = getLastSavedRecordId();addReln(hearth_id, photo_associated_id, \"AssociatedPhoto\");");
+}
+
+saveAndCloseAssociatedPhoto() {
+    if (isNull(getFieldValue("AssociatedPhotos/AssociatedPhotos/CameraPrefix")) || isNull(getFieldValue("AssociatedPhotos/AssociatedPhotos/PhotoNumber"))) { 
+        showWarning("Validation Error", "Please fill in both fields before saving.");
+        showTabGroup("AssociatedPhotos");
+        return;
+    }
+    if (!isNull(photo_associated_id)) {
+        entity = fetchRel(photo_associated_id);
+    }
+    saveTabGroup("AssociatedPhotos", photo_associated_id, null, null, "photo_associated_id = getLastSavedRecordId();addReln(hearth_id, photo_associated_id, \"AssociatedPhoto\"); cancelTabGroup(\"AssociatedPhotos\", false);");
+}
+
+
 // MISC FUNCTIONS    
 
 saveEntitiesToRel(type, entity1, entity2) {
@@ -378,12 +509,12 @@ saveEntitiesToRel(type, entity1, entity2) {
 }
 
 makeVocab(String attrib){
-    Object a = fetchAll("select vocabid, vocabname from vocabulary join attributekey using (attributeid) where attributename = '"+attrib+"' ");
+    Object a = fetchAll("select vocabid, vocabname from vocabulary join attributekey using (attributeid) where attributename = '"+attrib+"' order by vocabname;");
     return a;
 }
 
 makePictureGallery(String attrib){
-    fetchAll("select vocabid, vocabname, pictureurl from vocabulary left join attributekey using (attributeid) where attributename = '" + attrib + "';");
+    fetchAll("select vocabid, vocabname, pictureurl from vocabulary left join attributekey using (attributeid) where attributename = '" + attrib + "' order by vocabname;");
 }
 
 /*** Uneditable - you can edit the code below with extreme precaution ***/

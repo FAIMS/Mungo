@@ -11,6 +11,15 @@
     </property>
   </RelationshipElement>
 
+  <RelationshipElement name="Photographs">
+    <property name="Camera Prefix" type="freetext" isIdentifier="true">
+      <description>Prefix used in naming convention of photographs taken</description>
+    </property>
+    <property name="Photo Number" type="numeric" isIdentifier="true">
+      <description>Photo Number</description>
+    </property>
+  </RelationshipElement>
+
   <RelationshipElement name="HearthAssociated">
     <description>Materials associated to a hearth</description>
     <property name="Associated material" type="enum" isIdentifier="true">
@@ -26,11 +35,11 @@
     <property name="Lacustrine Material" type="enum">
       <description>If lacustrine material is in or associated unambiguously with the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/lacust/exoskel.png">{exoskel_}<description>Crustacean exoskeleton</description></term>
-        <term pictureURL="files/data/gallery/hearth/lacust/fishbone.png">{fishbone_}<description>Fish bone</description></term>
-        <term pictureURL="files/data/gallery/hearth/lacust/gastrolith.png">{gastrolith_}<description>Crustacean gastrolith</description></term>
-        <term pictureURL="files/data/gallery/hearth/lacust/mussel.png">{mussel_}<description>Mussel shell or shell fragment</description></term>
-        <term pictureURL="files/data/gallery/hearth/lacust/otoliths.png">{otoliths_}<description>Fish otolith</description></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/mussel.png">{amussel}<description>Mussel shell or shell fragment</description></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/fishbone.png">{bfishbone}<description>Fish bone</description></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/otoliths.png">{cotoliths}<description>Fish otolith</description></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/gastrolith.png">{dgastrolith}<description>Crustacean gastrolith</description></term>
+        <term pictureURL="files/data/gallery/hearth/lacust/exoskel.png">{eexoskel}<description>Crustacean exoskeleton</description></term>
       </lookup>
     </property>
     <property name="Burnt lacustrine material" type="enum">
@@ -43,12 +52,12 @@
     <property name="Associated terrestrial bone" type="enum">
       <description>If terrestrial bone is present in the hearth or unambiguously associated with it, select those of the following that have been identified (see Old Bone Reference Manual for more illustrations)</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/bone/birdbone.png">{birdbone_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/bone/mammal.png">{mammal_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/bone/other.png">{other_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/bone/reptile.png">{reptile_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/bone/undiag.png">{undiag}<description>Fragment is undiagnostic</description></term>
-        <term pictureURL="files/data/gallery/hearth/bone/unident.png">{unident_}<description>Cannot be identified by recorder</description></term>
+        <term pictureURL="files/data/gallery/hearth/bone/mammal.png">{amammal}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/birdbone.png">{bbirdbone}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/reptile.png">{creptile}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/other.png">{dother}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/bone/unident.png">{eunident}<description>Cannot be identified by recorder</description></term>
+        <term pictureURL="files/data/gallery/hearth/bone/undiag.png">{fundiag}<description>Fragment is undiagnostic</description></term>
       </lookup>
     </property>
     <property name="Burnt bone" type="enum">
@@ -61,10 +70,10 @@
     <property name="Associated eggshell" type="enum">
       <description>If eggshell is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/eggshell/emu.png">{emu_}<description>Emu eggshell</description></term>
-        <term pictureURL="files/data/gallery/hearth/eggshell/genyo.png">{genyo_}<description>Genyornis eggshell</description></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/emu.png">{emu}<description>Emu eggshell</description></term>
+        <term pictureURL="files/data/gallery/hearth/eggshell/genyo.png">{genyo}<description>Genyornis eggshell</description></term>
         <term>{indet}<description/></term>
-        <term>{other_}<description/></term>
+        <term>{other}<description/></term>
       </lookup>
     </property>
     <property name="Burnt eggshell" type="enum">
@@ -77,82 +86,82 @@
     <property name="Associated artefacts" type="enum">
       <description>If stone artefacts are present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term HeuristID="0-5199" StandardCode="">{cs_}<description>Chipped stone</description></term>
-        <term HeuristID="0-5201" StandardCode="">{ground_}<description>Ground stone</description></term>
-        <term HeuristID="0-5200" StandardCode="">{um_}<description>Unmodified stone</description></term>
+        <term HeuristID="0-5199" StandardCode="">{acs}<description>Chipped stone</description></term>
+        <term HeuristID="0-5200" StandardCode="">{bum}<description>Unmodified stone</description></term>
+        <term HeuristID="0-5201" StandardCode="">{cground}<description>Ground stone</description></term>
       </lookup>
     </property>
     <property name="CS types" type="enum">
       <description>If chipped stone is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term HeuristID="0-5208" StandardCode="">{co_}<description>Core</description></term>
-        <term HeuristID="0-5209" StandardCode="">{deb_}<description>Flaking debris, including whole flakes, broken flakes and angular fragments</description></term>
-        <term HeuristID="0-5210" StandardCode="">{hammer_}<description>Hammerstone</description></term>
-        <term HeuristID="0-5211" StandardCode="">{indet_}<description>Indeterminate</description></term>
-        <term HeuristID="0-5207" StandardCode="">{ru_}<description>Retouched/utilised artefact</description></term>
+        <term HeuristID="0-5207" StandardCode="">{aru}<description>Retouched/utilised artefact</description></term>
+        <term HeuristID="0-5208" StandardCode="">{bco}<description>Core</description></term>
+        <term HeuristID="0-5209" StandardCode="">{cdeb}<description>Flaking debris, including whole flakes, broken flakes and angular fragments</description></term>
+        <term HeuristID="0-5210" StandardCode="">{dhammer}<description>Hammerstone</description></term>
+        <term HeuristID="0-5211" StandardCode="">{eindet}<description>Indeterminate</description></term>
       </lookup>
     </property>
     <property name="RU types" type="enum">
       <description>If retouched or utilised chipped stone is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/retouched/backed.png">{backed_}<description>Backed artefact</description></term>
-        <term pictureURL="files/data/gallery/hearth/retouched/bifac.png">{bifac_}<description>Bifacially flaked artefact</description></term>
-        <term pictureURL="files/data/gallery/hearth/retouched/notch.png">{notch_}<description>Notched artefact</description></term>
-        <term pictureURL="files/data/gallery/hearth/retouched/otherru.png">{otherru_}<description>Any other type of artefact with retouch or use-wear</description></term>
-        <term pictureURL="files/data/gallery/hearth/retouched/scraper.png">{scraper_}<description>Other type of scraper</description></term>
-        <term pictureURL="files/data/gallery/hearth/retouched/unifpt.png">{unifpt_}<description>Unifacial point</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/notch.png">{anotch}<description>Notched artefact</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/scraper.png">{bscraper}<description>Other type of scraper</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/backed.png">{cbacked}<description>Backed artefact</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/unifpt.png">{dunifpt}<description>Unifacial point</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/bifac.png">{ebifac}<description>Bifacially flaked artefact</description></term>
+        <term pictureURL="files/data/gallery/hearth/retouched/otherru.png">{fotherru}<description>Any other type of artefact with retouch or use-wear</description></term>
       </lookup>
     </property>
     <property name="Unmod types" type="enum">
       <description>If unmodified stone is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term>{indet}<description>Indeterminate unmodified stone</description></term>
-        <term pictureURL="files/data/gallery/hearth/unmod/nodule.png">{nodule_}<description>Nodular or rounded cobble</description></term>
-        <term pictureURL="files/data/gallery/hearth/unmod/pebble.png">{pebble_}<description>Small nodular or rounded piece, unlikely to be useful for artefact manufacture</description></term>
-        <term pictureURL="files/data/gallery/hearth/unmod/slab.png">{slab_}<description>Angular piece</description></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/nodule.png">{anodule}<description>Nodular or rounded cobble</description></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/slab.png">{bslab}<description>Angular piece</description></term>
+        <term pictureURL="files/data/gallery/hearth/unmod/pebble.png">{cpebble}<description>Small nodular or rounded piece, unlikely to be useful for artefact manufacture</description></term>
+        <term>{dindet}<description>Indeterminate unmodified stone</description></term>
       </lookup>
     </property>
     <property name="Ground material" type="enum">
       <description>If ground stone is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/ground/amorph.png">{amorph_}<description>Poorly defined, or small, discontinuous ground surface, not matching any of the above</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/grooved.png">{grooved_}<description>Single or multiple grooves</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/millstone.png">{millstone_}<description>Large, concave to flattish ground surface</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/mortar.png">{mortar_}<description>A circular or oval basin</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/muller.png">{muller_}<description>Convex surface with facet from back and forth motion</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/pestle.png">{pestle_}<description>A cobble with convex of flattish ground end</description></term>
-        <term pictureURL="files/data/gallery/hearth/ground/undiag.png">{undiag}<description>Fragmentary, not complete enough to distinguish nature of ground surface</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/millstone.png">{amillstone}<description>Large, concave to flattish ground surface</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/muller.png">{bmuller}<description>Convex surface with facet from back and forth motion</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/mortar.png">{cmortar}<description>A circular or oval basin</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/pestle.png">{dpestle}<description>A cobble with convex of flattish ground end</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/grooved.png">{egrooved}<description>Single or multiple grooves</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/amorph.png">{famorph}<description>Poorly defined, or small, discontinuous ground surface, not matching any of the above</description></term>
+        <term pictureURL="files/data/gallery/hearth/ground/undiag.png">{gundiag}<description>Fragmentary, not complete enough to distinguish nature of ground surface</description></term>
       </lookup>
     </property>
     <property name="Ground material status" type="enum">
       <description>Ground material status?</description>
       <lookup>
-        <term HeuristID="0-5256" StandardCode="">{fragment_}<description/></term>
-        <term HeuristID="0-5257" StandardCode="">{refit}<description/></term>
-        <term HeuristID="0-5255" StandardCode="">{whole_}<description/></term>
+        <term HeuristID="0-5255" StandardCode="">{awhole}<description/></term>
+        <term HeuristID="0-5256" StandardCode="">{bfragment}<description/></term>
+        <term HeuristID="0-5257" StandardCode="">{crefit}<description/></term>
       </lookup>
     </property>
     <property name="Artefact raw material" type="enum">
       <description>If stone artefacts are present in the hearth, select those types of raw material that have been observed</description>
       <lookup>
-        <term>{other_}<description>Other material</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/qtz.png">{qtz_}<description>Quartz</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/qtzite.png">{qtzite_}<description>Quartzite</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/sandst.png">{sandst_}<description>Sandstone</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/ironst.png">{ironst_}<description>Ironstone</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/silccoars.png">{silccoars_}<description>Coarse-grained silcrete</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/silcfine.png">{silcfine_}<description>Fine-grained silcrete</description></term>
-        <term pictureURL="files/data/gallery/hearth/artefact/silcgran.png">{silcgran_}<description>Granular silcrete</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silcfine.png">{asilcfine}<description>Fine-grained silcrete</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silccoars.png">{bsilccoars}<description>Coarse-grained silcrete</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/silcgran.png">{csilcgran}<description>Granular silcrete</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtzite.png">{dqtzite}<description>Quartzite</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/qtz.png">{eqtz}<description>Quartz</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/ironst.png">{fironst}<description>Ironstone</description></term>
+        <term pictureURL="files/data/gallery/hearth/artefact/sandst.png">{gsandst}<description>Sandstone</description></term>
+        <term>{hother}<description>Other material</description></term>
       </lookup>
     </property>
     <property name="Other worked material" type="enum">
       <description>If other worked or transported material is present in the hearth, select those of the following that have been observed</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/other/otherbone.png">{bone_}<description>Worked bone</description></term>
-        <term pictureURL="files/data/gallery/hearth/other/otherfacetochre.png">{facetochre_}<description>Facetted ochre</description></term>
-        <term pictureURL="files/data/gallery/hearth/other/otherochre.png">{ochre_}<description>Unworked ochre</description></term>
-        <term pictureURL="files/data/gallery/hearth/other/otherqtzxtal.png">{qtzxtal}<description>Unworked quartz crystal</description></term>
-        <term pictureURL="files/data/gallery/hearth/other/othershell.png">{shell_}<description>Worked shell</description></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherbone.png">{abone}<description>Worked bone</description></term>
+        <term pictureURL="files/data/gallery/hearth/other/othershell.png">{bshell}<description>Worked shell</description></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherochre.png">{cochre}<description>Unworked ochre</description></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherfacetochre.png">{dfacetochre}<description>Facetted ochre</description></term>
+        <term pictureURL="files/data/gallery/hearth/other/otherqtzxtal.png">{eqtzxtal}<description>Unworked quartz crystal</description></term>
       </lookup>
     </property>
   </RelationshipElement>
@@ -169,21 +178,22 @@
       <description>Type of hearth</description>
       <lookup>
         <term pictureURL="files/data/gallery/hearth/hearthHeat/Heat_retainer.png">{Heat_retainer}<description>Hearths with heat-retainer hearthstones</description>
-            <term pictureURL="files/data/gallery/hearth/hearthHeat/hscarb.png">{hscarb}<description>Carbonate hearthstones</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsclay.png">{hsclay}<description>Baked clay or sandy clay hearthstones</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsindet.png">{hsindet}<description>Hearthstones of indeterminate material</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsother.png">{hsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsterm.png">{hsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsterm.png">{ahsterm}<description>Termite nest hearthstones (holes and channels visible)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hscarb.png">{bhscarb}<description>Carbonate hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsclay.png">{chsclay}<description>Baked clay or sandy clay hearthstones</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsother.png">{dhsother}<description>Other type of hearthstones (e.g. silcrete)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthHeat/hsindet.png">{ehsindet}<description>Hearthstones of indeterminate material</description></term>
         </term>
         <term pictureURL="files/data/gallery/hearth/hearthNonHeat/Non-heat_retainer.png">{Non-heat_retainer}<description>Hearths without hearthstones</description>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/ashlens.png">{ashlens}<description/></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/ashpatch.png">{ashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/baked_clay.png">{baked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/bakedsed.png">{bakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/charclens.png">{charclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/emupat.png">{emupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/other.png">{other}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
-            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/staining.png">{staining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/emupat.png">{aemupat}<description>Discrete patch of baked sediments, associated with charcoal, organic remains, and/or ash</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/baked_clay.png">{bbaked_clay}<description>Discrete patch of baked   clay, may be underlain by black stain, may or may not be  associated with organic remains</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/bakedsed.png">{cbakedsed}<description>Discrete patch of baked sediment without associated charcoal or organic remains</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/ashlens.png">{dashlens}<description/></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/ashpatch.png">{eashpatch}<description>Discrete patch containing fragmented or disseminated  charcoal and/or ash</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/charclens.png">{fcharclens}<description>A discrete lens of charcoal fragments (rare)</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/staining.png">{gstaining}<description>Black or dark staining of the sediment that does not correspond to any of the above</description></term>
+            <term pictureURL="files/data/gallery/hearth/hearthNonHeat/other.png">{hother}<description>A cluster of burnt material without clear hearth structure, eg fish bone, emu eggshell, mammal bone</description></term>
+            
         </term>
       </lookup>
     </property>
@@ -193,120 +203,125 @@
     <property name="Charcoal" type="enum">
       <description>Is there any charcoal associated with the hearth, if so, in what form?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/charcoal/dissem.png">{dissem}<description>Disseminated charcoal: fine particles of charcoal dispersed through the hearth feature or its sedimentary matrix</description></term>
-        <term pictureURL="files/data/gallery/hearth/charcoal/flecks.png">{flecks}<description>Small fragments of charcoal dispersed through the hearth feature or its sedimentary matrix</description></term>
-        <term pictureURL="files/data/gallery/hearth/charcoal/indet.png">{indet}<description>Indeterminate</description></term>
-        <term pictureURL="files/data/gallery/hearth/charcoal/lumps.png">{lumps}<description>Fragments or lumps of charcoal occur within the hearth or its sedimentary matrix</description></term>
-        <term pictureURL="files/data/gallery/hearth/charcoal/none.png">{none}<description/>No charcoal visible</term>
+        <term pictureURL="files/data/gallery/hearth/charcoal/none.png">{anone}<description/>No charcoal visible</term>
+        <term pictureURL="files/data/gallery/hearth/charcoal/dissem.png">{bdissem}<description>Disseminated charcoal: fine particles of charcoal dispersed through the hearth feature or its sedimentary matrix</description></term>
+        <term pictureURL="files/data/gallery/hearth/charcoal/flecks.png">{cflecks}<description>Small fragments of charcoal dispersed through the hearth feature or its sedimentary matrix</description></term>
+        <term pictureURL="files/data/gallery/hearth/charcoal/lumps.png">{dlumps}<description>Fragments or lumps of charcoal occur within the hearth or its sedimentary matrix</description></term>
+        <term pictureURL="files/data/gallery/hearth/charcoal/indet.png">{eindet}<description>Indeterminate</description></term>
       </lookup>
     </property>
     <property name="Degree in situ" type="enum">
       <description>Select the proportion of visible hearth material that remains in situ</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/degree/ambig.png">{ambig_}<description>The hearth material appears to be in situ, but it is impossible to say whether it is actually recemented</description></term>
-        <term pictureURL="files/data/gallery/hearth/degree/most.png">{most_}<description>Most of the visible hearth material is in situ</description></term>
-        <term pictureURL="files/data/gallery/hearth/degree/cement.png">{recement_}<description>The hearth material appears to be in situ, but there is a high likelihood that it is actually cemented in redeposited sediment</description></term>
-        <term pictureURL="files/data/gallery/hearth/degree/some.png">{some}<description>At least some of the hearth is in situ</description></term>
-        <term pictureURL="files/data/gallery/hearth/degree/surface.png">{surface}<description>No hearth material is embedded in sediment</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/most.png">{amost}<description>Most of the visible hearth material is in situ</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/some.png">{bsome}<description>At least some of the hearth is in situ</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/surface.png">{csurface}<description>No hearth material is embedded in sediment</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/cement.png">{drecement}<description>The hearth material appears to be in situ, but there is a high likelihood that it is actually cemented in redeposited sediment</description></term>
+        <term pictureURL="files/data/gallery/hearth/degree/ambig.png">{eambig}<description>The hearth material appears to be in situ, but it is impossible to say whether it is actually recemented</description></term>
       </lookup>
     </property>
-    <!-- change this to check box -->
+    <property name="Has modification" type="enum">
+      <description>Does the hearth been modified?</description>
+      <lookup>
+        <term>{no}</term>
+        <term>{yes}</term>
+      </lookup>
+    </property>
     <property name="Modification of heat retainer hearths?" type="enum">
       <description>Have heat retainer hearths been modified?</description>
       <lookup>
-        <term HeuristID="0-5075" StandardCode="">{dispers}<description>Material widely dispersed from in situ or clustered part of hearth</description></term>
-        <term HeuristID="0-5074" StandardCode="">{frag}<description>Material highly fragmented</description></term>
-        <term HeuristID="0-5073" StandardCode="">{none}<description>Hearth structure is largely maintained, hearthstones are in good conditions</description></term>
-        <term HeuristID="0-5077" StandardCode="">{polish}<description>Hearthstones are smoothed and glossy material</description></term>
+        <term HeuristID="0-5074" StandardCode="">{afrag}<description>Material highly fragmented</description></term>
+        <term HeuristID="0-5075" StandardCode="">{bdispers}<description>Material widely dispersed from in situ or clustered part of hearth</description></term>
+        <term HeuristID="0-5077" StandardCode="">{cpolish}<description>Hearthstones are smoothed and glossy material</description></term>
       </lookup>
     </property>
     <property name="Modification of non heat retainer hearths?" type="enum">
       <description>Have non heat retainer hearths been modified?</description>
       <lookup>
-        <term HeuristID="0-5087" StandardCode="">{gul}<description>Feature is bisected by an established gully</description></term>
-        <term HeuristID="0-5084" StandardCode="">{incrill}<description>Incipient rill network extending to edge of hearth or cutting back into it</description></term>
-        <term HeuristID="0-5085" StandardCode="">{rill}<description>Well-developed rills are cutting through the hearth</description></term>
-        <term HeuristID="0-5086" StandardCode="">{undercut}<description>Underlying sediment has been removed through erosion</description></term>
-        <term HeuristID="0-5083" StandardCode="">{weather}<description>Hearth material has started to weather and/or crumble, but the feature remains largely intact</description></term>
+        <term HeuristID="0-5083" StandardCode="">{aweather}<description>Hearth material has started to weather and/or crumble, but the feature remains largely intact</description></term>
+        <term HeuristID="0-5084" StandardCode="">{bincrill}<description>Incipient rill network extending to edge of hearth or cutting back into it</description></term>
+        <term HeuristID="0-5085" StandardCode="">{crill}<description>Well-developed rills are cutting through the hearth</description></term>
+        <term HeuristID="0-5086" StandardCode="">{dundercut}<description>Underlying sediment has been removed through erosion</description></term>
+        <term HeuristID="0-5087" StandardCode="">{egul}<description>Feature is bisected by an established gully</description></term>
       </lookup>
     </property>
     <property name="Topo setting" type="enum">
       <description>Where on the lunette exposure is the hearth located?</description>
       <lookup>
-        <term>{_LT6degree_}<description>Slightly sloping surface</description></term>
-        <term>{6-12deg_}<description>Moderately sloping surface</description></term>
-        <term>{GT12degree_}<description>More steeply sloping surface</description></term>
-        <term>{chanfloor_}<description>In the floor of a modern outwash channel</description></term>
-        <term>{chanwall__}<description>In the wall of a modern outwash channel</description></term>
-        <term>{deepgulfl_}<description>In the floor of a gully greater than 1.5m wide and deep</description></term>
-        <term>{deepgulwal_}<description>In the wall of a gully greater than 1.5m wide and deep</description></term>
-        <term>{platform}<description>Broad, flat platform exposure</description></term>
-        <term>{residside_}<description>In the side of a residual</description></term>
-        <term>{residtop_}<description>Flat surface on top of a residual</description></term>
-        <term>{ridge_}<description>On a narrow ridge in heavily eroded area</description></term>
-        <term>{ridgerill_}<description>Feature in a heavily eroded area is cut by deep rills and straddles rill wall and rill flow</description></term>
-        <term>{rillfloor_}<description>In the floor of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
-        <term>{rillwall_}<description>In the wall of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
-        <term>{shalgulfl_}<description>In the floor of a gully less than 1.5m wide or deep</description></term>
-        <term>{shalgulwal_}<description>In the wall of a gully less than 1.5m wide or deep</description></term>
-        <term>{shallrill_}<description>Within a shallow rill</description></term>
+        <term>{aplatform}<description>Broad, flat platform exposure</description></term>
+        <term>{bLT6degree}<description>Slightly sloping surface</description></term>
+        <term>{c6-12deg}<description>Moderately sloping surface</description></term>
+        <term>{dGT12degree}<description>More steeply sloping surface</description></term>
+        <term>{eshallrill}<description>Within a shallow rill</description></term>
+        <term>{frillfloor}<description>In the floor of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
+        <term>{grillwall}<description>In the wall of a deep rill (strong, vertical rilling in clay-rich sediments)</description></term>
+        <term>{hridge}<description>On a narrow ridge in heavily eroded area</description></term>
+        <term>{iridgerill}<description>Feature in a heavily eroded area is cut by deep rills and straddles rill wall and rill flow</description></term>
+        <term>{jshalgulfl}<description>In the floor of a gully less than 1.5m wide or deep</description></term>
+        <term>{kshalgulwal}<description>In the wall of a gully less than 1.5m wide or deep</description></term>
+        <term>{ldeepgulfl}<description>In the floor of a gully greater than 1.5m wide and deep</description></term>
+        <term>{mdeepgulwal}<description>In the wall of a gully greater than 1.5m wide and deep</description></term>
+        <term>{nresidtop}<description>Flat surface on top of a residual</description></term>
+        <term>{oresidside}<description>In the side of a residual</description></term>
+        <term>{pchanfloor}<description>In the floor of a modern outwash channel</description></term>
+        <term>{qchanwall}<description>In the wall of a modern outwash channel</description></term>
       </lookup>
     </property>
     <property name="Sediments" type="enum">
       <description>What is the surrounding sediment?</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/sediments/alternat.png">{alternat_}<description>Alternating layers of sand and clay</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/brownsand.png">{brownsand_}<description>Sandy sediments of a brownish colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/brownsoil.png">{brownsoil_}<description>Soil of a brownish colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/carblag.png">{carblag_}<description>Any other surface lag of hard carbonate nodules</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/carbpavemt.png">{carbpavemt_}<description>Well developed in situ soil carbonate forming a pavement</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/carbrework.png">{carbrework_}<description>A carbonate lag that has been reworked and reburied</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/carbsoft.png">{carbsoft_}<description>In situ soil carbonate in a diffuse horizon</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/Chorizon.png">{Chorizon_}<description>In situ nodular soil carbonate in any other sediment</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/claylens.png">{claylens_}<description>Distinct clay lens within other sediments</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/cobble.png">{cobble_}<description>A relatively continuous bed of cobbles or coarse gravel</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/ggC.png">{ggC_}<description>In situ soil carbonate (C-horizon) associated with Golgol sediments</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/gglag.png">{gglag_}<description>A surface lag of carbonate derived from Golgol sediments</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/greenclay.png">{greenclay_}<description>Clay sediments of a greenish colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/indet.png">{indet}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/otherclay.png">{otherclay_}<description>Clay sediments of another colour (usually brown)</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/othersand.png">{othersand_}<description>Sandy sediments that are of another colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/redsand.png">{redsand_}<description>Sandy sediments of a reddish colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/redsoil.png">{redsoil_}<description>Soil of a reddish colour</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/sandlens.png">{sandlens_}<description>Distinct sand lens within other sediments</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/sandyclay.png">{sandyclay_}<description>Sandy clay</description></term>
-        <term pictureURL="files/data/gallery/hearth/sediments/whitesand.png">{whitesand_}<description>Sandy sediments that are clean and whitish</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/redsoil.png">{aredsoil}<description>Soil of a reddish colour</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/brownsoil.png">{bbrownsoil}<description>Soil of a brownish colour</description></term>
+        
+        <term pictureURL="files/data/gallery/hearth/sediments/redsand.png">{credsand}<description>Sandy sediments of a reddish colour</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/brownsand.png">{dbrownsand}<description>Sandy sediments of a brownish colour</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/whitesand.png">{ewhitesand}<description>Sandy sediments that are clean and whitish</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/othersand.png">{fothersand}<description>Sandy sediments that are of another colour</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/greenclay.png">{ggreenclay}<description>Clay sediments of a greenish colour</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/otherclay.png">{hotherclay}<description>Clay sediments of another colour (usually brown)</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/sandyclay.png">{isandyclay}<description>Sandy clay</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/alternat.png">{jalternat}<description>Alternating layers of sand and clay</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/claylens.png">{kclaylens}<description>Distinct clay lens within other sediments</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/sandlens.png">{lsandlens}<description>Distinct sand lens within other sediments</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/cobble.png">{mcobble}<description>A relatively continuous bed of cobbles or coarse gravel</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/gglag.png">{ngglag}<description>A surface lag of carbonate derived from Golgol sediments</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/carblag.png">{ocarblag}<description>Any other surface lag of hard carbonate nodules</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/ggC.png">{pggC}<description>In situ soil carbonate (C-horizon) associated with Golgol sediments</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/Chorizon.png">{qChorizon}<description>In situ nodular soil carbonate in any other sediment</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/carbsoft.png">{rcarbsoft}<description>In situ soil carbonate in a diffuse horizon</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/carbpavemt.png">{scarbpavemt}<description>Well developed in situ soil carbonate forming a pavement</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/carbrework.png">{tcarbrework}<description>A carbonate lag that has been reworked and reburied</description></term>
+        <term pictureURL="files/data/gallery/hearth/sediments/indet.png">{uindet}<description/></term>
       </lookup>
     </property>
     <property name="Vulnerability" type="enum">
       <description>How vulnerable is the feature?</description>
       <lookup>
-        <term>{extreme}<description>Hearth material is in imminent danger of rapid removal and loss, e.g. edge of eroding residual or deep rill, in gully wall, on a steep slope- washed surface, or in loose sandy sediment</description></term>
-        <term>{high_}<description>High probability of material being removed by erosion, or of the hearth losing its integrity, e.g. relatively steep slope with incipient rills and/or in loose sandy sediment</description></term>
-        <term>{low_}<description>On a relatively stable, flat surface or gentle slope that is not being eroded by rills, in well cemented (firm) sediment</description></term>
-        <term>{moderate_}<description>Wider area is being eaten away by ongoing erosion, e.g. near edge of platform exposure, gully head, expanding rill system</description></term>
+        <term>{alow}<description>On a relatively stable, flat surface or gentle slope that is not being eroded by rills, in well cemented (firm) sediment</description></term>
+        <term>{bmoderate}<description>Wider area is being eaten away by ongoing erosion, e.g. near edge of platform exposure, gully head, expanding rill system</description></term>
+        <term>{chigh}<description>High probability of material being removed by erosion, or of the hearth losing its integrity, e.g. relatively steep slope with incipient rills and/or in loose sandy sediment</description></term>
+        <term>{dextreme}<description>Hearth material is in imminent danger of rapid removal and loss, e.g. edge of eroding residual or deep rill, in gully wall, on a steep slope- washed surface, or in loose sandy sediment</description></term>
       </lookup>
     </property>
     <property name="Palaeotop setting" type="enum">
       <description>Select from the list what the feature palaeotopographic setting is.</description>
       <lookup>
-        <term pictureURL="files/data/gallery/hearth/paleotop/backdune.png">{backdune_}<description>Stratigraphic layers are sloping towards the hinterland</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/beach.png">{beach_}<description>An area of rounded cobbles or gravels in distinct horizon</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/crest.png">{crest_}<description>Crest of dune, stratigraphic layers slope away, towards both lakebed and hinterland</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/foredune.png">{foredune_}<description>Stratigraphic layers are sloping towards the lakebed</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/indet.png">{indet}<description>Indeterminate</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/lakebed.png">{lakebed_}<description>Lakebed sediments</description></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/other.png">{other_}<description/></term>
-        <term pictureURL="files/data/gallery/hearth/paleotop/spit.png">{spit_}<description>Projection from dune into lakebed</description></term>
+        
+        <term pictureURL="files/data/gallery/hearth/paleotop/foredune.png">{aforedune}<description>Stratigraphic layers are sloping towards the lakebed</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/backdune.png">{bbackdune}<description>Stratigraphic layers are sloping towards the hinterland</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/beach.png">{cbeach}<description>An area of rounded cobbles or gravels in distinct horizon</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/lakebed.png">{dlakebed}<description>Lakebed sediments</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/crest.png">{ecrest}<description>Crest of dune, stratigraphic layers slope away, towards both lakebed and hinterland</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/spit.png">{fspit}<description>Projection from dune into lakebed</description></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/other.png">{gother}<description/></term>
+        <term pictureURL="files/data/gallery/hearth/paleotop/indet.png">{hindet}<description>Indeterminate</description></term>
     </lookup>
     </property>
     <property name="Types of Photographs taken" type="enum">
       <description>What kinds of pics were taken?</description>
       <lookup>
-        <term HeuristID="0-5145" StandardCode="">{both_}<description>Both frame and general photos taken</description></term>
-        <term HeuristID="0-5146" StandardCode="">{frame_}<description>Only frame photos taken</description></term>
-        <term HeuristID="0-5144" StandardCode="">{general_}<description>Only general artefact and setting photos taken</description></term>
-        <term HeuristID="0-5147" StandardCode="">{none}<description>No photos</description></term>
+        <term HeuristID="0-5146" StandardCode="">{frame}<description>Frame photos taken</description></term>
+        <term HeuristID="0-5144" StandardCode="">{general}<description>General artefact and setting photos taken</description></term>
       </lookup>
     </property>
     <property name="Photos" type="file">
